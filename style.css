@@ -3,9 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container{
-    display: flex;
-}
+
 .circle-container{
     border-radius: 50px;
     border: 20px;
@@ -23,10 +21,23 @@ h1{
     font-weight: bold;                
     text-decoration: none;
 }
-nav, section a{
+section a{
     text-decoration: none;
     align-items: center;
-    text-align: center;
+    text-align: center;  
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: inherit;
+    font-family: playfair Display,Arial, sans-serif;
+    font-weight: bold;
 }
 
 h2, h3{
@@ -47,7 +58,6 @@ body{
 table {
     border-collapse: collapse;
 }
-
 #contact{
     background-color: #f0f0f0;
     margin: 30px;
