@@ -3,13 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container{
+    display: flex;
+}
 .circle-container{
     border-radius: 50px;
     border: 20px;
     border-color: aqua;
 }
 p{
-    color: grey;
+    color: rgb(0, 0, 0);
 }
 h1{
     color: rgb(5, 49, 96);
@@ -20,17 +23,31 @@ h1{
     font-weight: bold;                
     text-decoration: none;
 }
-nav a{
+nav, section a{
     text-decoration: none;
     align-items: center;
     text-align: center;
 }
-h2{
-    color: darkblue;
+
+h2, h3{
+    color: rgb(2, 2, 119);
+    font-family: playfair Display, Arial, sans-serif;
+    line-height: 1.5;                
+    text-align: center;               
+    font-weight: bold;                
+    text-decoration: none;
+    background-color: rgb(211, 212, 209);
+    
 }
-.tech-stack{
-    font-style: italic;
+  
+body{
+    font-family: Merriweather, Arial, sans-serif;
+    line-height: 2ch;
 }
+table {
+    border-collapse: collapse;
+}
+
 #contact{
     background-color: #f0f0f0;
     margin: 30px;
