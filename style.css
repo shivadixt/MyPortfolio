@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.circle-container{
+    border-radius: 50px;
+    border: 20px;
+    border-color: aqua;
+}
+p{
+    color: grey;
+}
+h1{
+    color: rgb(5, 49, 96);
+    font-size: 40px;
+    font-family: Playfair Display, Arial, sans-serif;   
+    line-height: 1.5;                
+    text-align: center;               
+    font-weight: bold;                
+    text-decoration: none;
+}
+nav a{
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+}
+h2{
+    color: darkblue;
+}
+.tech-stack{
+    font-style: italic;
+}
+#contact{
+    background-color: #f0f0f0;
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    width: 300px;
+}

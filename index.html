@@ -4,190 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-
+    <link rel="stylesheet" href="style.css" >  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Section one -->
-    <h1 style="color:rgb(33, 93, 73)" >Shiva Dixit </h1>
-    <h3>B.Tech CSE Student | Developer | Builder</h3>
-    <!-- <img src="D:\Portfoliooooooooo\MyImg" alt=""> -->
-    <a href="#About Me">About Me</a> &nbsp;&nbsp;
-    <a href="#Projects">Projects</a> &nbsp;&nbsp;
-    <a href="#Skills">Skills</a> &nbsp;&nbsp;
-    <a href="#Journey">Journey</a> &nbsp;&nbsp;
-    <a href="#Contact">Contact</a> 
-    <br>
-    <br>
+    <header>
+        <!-- Section one -->
+        <h1>Shiva Dixit </h1> 
+        
+        <h3>B.Tech CSE Student | Developer | Builder</h3>
+        <nav>
+            <a href="#about-me" class="ab">About Me </a> &nbsp;&nbsp;
+            <a href="#projects">Projects</a> &nbsp;&nbsp;
+            <a href="#skills">Skills</a> &nbsp;&nbsp;
+            <a href="#journey">Journey</a> &nbsp;&nbsp;
+            <a href="#contact">Contact</a>
+        </nav>
+        <div><img class="circle-container" src="./Myimg.jpg" alt="MyImage" width="100" height="100" ></div>
+        <br>
+        <br>
+    </header>
 
     <hr>
 
     <!-- Section 2 -->
-    <h2>B.Tech CSE Student & Developer</h2>
-    <p>I'm a B.Tech Computer Science student who enjoys turning ideas into real, usable software. From web applications and mobile apps to cloud technologies and game development, I'm constantly learning by building.</p><br>
+    <section>
+        <h2>B.Tech CSE Student & Developer</h2>
+        <p>I'm a B.Tech Computer Science student who enjoys turning ideas into real, usable software. From web applications and mobile apps to cloud technologies and game development, I'm constantly learning by building.</p><br>
+    </section>
 
     <hr>
 
     <!-- section 3 -->
-     <h2 id="About Me">About Me</h2>
-     <p>I'm a B.Tech Computer Science student with a strong interest in software development and emerging technologies. I enjoy learning by building things rather than simply studying them whether that means creating a web application, developing a mobile app, experimenting with cloud infrastructure, or building a game. <br>
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>I'm a B.Tech Computer Science student with a strong interest in software development and emerging technologies. I enjoy learning by building things rather than simply studying them whether that means creating a web application, developing a mobile app, experimenting with cloud infrastructure, or building a game. <br>
+        My current interests include full-stack web development, Python, Flutter, cloud computing, DevOps, databases, and game development. I'm constantly experimenting with new technologies and trying to understand not just how they work, but where and why they should be used. <br>
+        My goal is to become a versatile software developer capable of taking an idea from concept to a working, deployable product.</p>
+        <br>
+    </section>
+    <hr>
 
-My current interests include full-stack web development, Python, Flutter, cloud computing, DevOps, databases, and game development. I'm constantly experimenting with new technologies and trying to understand not just how they work, but where and why they should be used. <br>
+    <!-- section 4 -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <table border="1">
+            <tr>
+                <th>Project</th>
+                <th>Description</th>
+                <th>Tech</th>
+            </tr>
 
-My goal is to become a versatile software developer capable of taking an idea from concept to a working, deployable product.</p>
-<br>
-<hr>
+            <tr>
+                <td>
+                    <a href="https://glaexchange.online/">GLA Exchange</a>
+                </td>
+                <td>
+                    <p>A platform designed around the student community at GLA University, allowing students to share and exchange useful resources and information.</p>
+                </td>
+                <td>
+                    <p class="tech-stack">HTML, CSS, JavaScript, React, MongoDB</p>
+                </td>
+            </tr>
 
-<!-- section 4 -->
- <h2 id="Projects">Projects</h2>
- <table border="1">
-    <tr>
-        <th>Project</th>
-        <th>Description</th>
-        <th>Tech</th>
-    </tr>
+            <tr>
+                <td>
+                    <a href="https://github.com/shivadixt/Note_Nest">NoteNest</a>
+                </td>
+                <td>
+                    <p>A notes application focused on creating, organizing, and managing notes with a simple and user-friendly experience.</p>
+                </td>
+                <td>
+                    <p class="tech-stack">Flutter, Dart</p>
+                </td>
+            </tr>
 
-    <tr>
-        <td>
-            <a href="https://glaexchange.online/">GLA Exchange</a>
-        </td>
-        <td>
-            <p>A platform designed around the student community at GLA University, allowing students to share and exchange useful resources and information.</p>
-        </td>
-        <td>
-            <p>HTML, CSS, JavaScript, React, MongoDB</p>
-        </td>
-    </tr>
+            <tr>
+                <td>
+                    <a href="https://github.com/shivadixt/fintwin">FinTwin</a>
+                </td>
+                <td>
+                    <p>A financial digital twin platform for simulating financial scenarios, analyzing risk, managing portfolios, and providing AI-powered financial insights.</p>
+                </td>
+                <td>
+                    <p class="tech-stack">AWS, Linux</p>
+                </td>
+            </tr>
 
-    <tr>
-        <td>
-            <a href="https://github.com/shivadixt/Note_Nest">NoteNest</a>
-        </td>
-        <td>
-            <p>A notes application focused on creating, organizing, and managing notes with a simple and user-friendly experience.</p>
-        </td>
-        <td>
-            <p>Flutter, Dart</p>
-        </td>
-    </tr>
+            <tr>
+                <td>
+                    House That Changes
+                </td>
+                <td>
+                    <p>A horror game concept where the environment changes and rearranges itself as the player explores the house.</p>
+                </td>
+                <td>
+                    <p class="tech-stack">Unity, C#</p>
+                </td>
+            </tr>
+        </table>
+        <br>
+    </section>
+    <hr>
 
-    <tr>
-        <td>
-            <a href="https://github.com/shivadixt/fintwin">FinTwin</a>
-        </td>
-        <td>
-            <p>A financial digital twin platform for simulating financial scenarios, analyzing risk, managing portfolios, and providing AI-powered financial insights.</p>
-        </td>
-        <td>
-            <p>AWS, Linux</p>
-        </td>
-    </tr>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>
+                <p>
+                    <strong>Language :</strong> Python, Java, JavaScript, HTML, CSS, Dart
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Frontend :</strong> HTML, CSS, JavaScript, React
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Backend :</strong> Flask, Django, FastApi, node.js
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Mobile Development :</strong> Flutter, Dart
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Databases :</strong> MongoDB,SQL
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Cloud & DevOps :</strong> AWS, Linux, Git, GitHub, Terraform, Virtualization
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Game Development :</strong> Unity, C#, unreal, godot
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Tools :</strong> VS Code, Git Bash, Android Studio
+                </p>
+            </li>
+        </ul>
+        <br>
+    </section>
+    <hr>
 
-    <tr>
-        <td>
-            House That Changes
-        </td>
-        <td>
-            <p>A horror game concept where the environment changes and rearranges itself as the player explores the house.</p>
-        </td>
-        <td>
-            Unity, C#
-        </td>
-    </tr>
- </table>
- <br>
- <hr>
+    <!-- section 5 -->
+    <section id="journey">
+        <h2>Journey</h2>
+        <p>My journey into software development has been driven by curiosity and experimentation. I started with programming fundamentals and gradually explored different areas of computer science  from web development and databases to mobile development, cloud computing, DevOps, and game development. <br>
+        Instead of limiting myself to a single technology, I like understanding how different parts of software development connect. This has led me to work with frontend interfaces, backend APIs, databases, cloud infrastructure, mobile applications, and game engines. <br>
+        I'm still learning, but every project gives me a better understanding of how real-world software is designed, developed, and deployed.</p>
+        <br>
+    </section>
+    <hr>
 
-<h2 id="Skills">Skills</h2>
-<ul>
-    <li>
-        <p>
-            <strong>Language :</strong> Python, Java, JavaScript, HTML, CSS, Dart
-        </p>
-    </li>
-    <li>
-        <p>
-            <strong>Frontend :</strong> HTML, CSS, JavaScript, React
-        </p>
-    </li>
-    <li>
-        <p>
-            <strong>Backend :</strong> Flask, Django, FastApi, node.js
-        </p>
-    </li>
-    <li>
-        <p>
-            <strong>Mobile Development :</strong> Flutter, Dart
-        </p>
-    </li>
-    <li>
-        <p>
-            <strong>Databases :</strong> MongoDB,SQL
-        </p>
-    </li>
-    <li>
-        <p>
-            <strong>Cloud & DevOps :</strong> AWS, Linux, Git, GitHub, Terraform, Virtualization
-        </p>
-    </li>
-    <li>
-        <p>
-            <strong>Game Development :</strong> Unity, C#, unreal, godot
-        </p>
-    </li>
-    <li>
-        <p>
-            <strong>Tools :</strong> VS Code, Git Bash, Android Studio
-        </p>
-    </li>
-</ul>
-<br>
-<hr>
+    <!-- section 6 -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="">
+            <fieldset>
+                <legend>Send a message</legend><br>
 
-<!-- section 5 -->
- <h2 id="Journey">Journey</h2>
- <p>My journey into software development has been driven by curiosity and experimentation. I started with programming fundamentals and gradually explored different areas of computer science  from web development and databases to mobile development, cloud computing, DevOps, and game development. <br>
-Instead of limiting myself to a single technology, I like understanding how different parts of software development connect. This has led me to work with frontend interfaces, backend APIs, databases, cloud infrastructure, mobile applications, and game engines. <br>
-I'm still learning, but every project gives me a better understanding of how real-world software is designed, developed, and deployed.</p>
-<br>
-<hr>
-
-<!-- section 6 -->
-<h2 id="Contact">Contact</h2>
-<fieldset>
-    <legend>Send a message</legend><br>
-
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required><br>
-
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required ><br>
-
-    <label for="message">Message</label>
-    <textarea name="message" id="message" rows="5"></textarea>
-
-    <button type="submit">Submit Form</button>
-</fieldset>
-<br>
-<h3>Connect</h3>
-<a href="https://github.com/shivadixt">github</a> &nbsp;&nbsp;
-<a href="https://www.linkedin.com/in/shiva-dixit-488533308/">LinkedIn</a> &nbsp;&nbsp;
-<a href="https://x.com/shiva_dxt">X</a> &nbsp;&nbsp;
-<a href="https://www.upwork.com/freelancers/~017c338989c6b5f24f?mp_source=share">Upwork</a>
-<hr>
-<h2 >Resume</h2>
-<a href="ShivaResume.pdf" download="ShivaResume.pdf">ShivaResume</a>
-<hr>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required><br>
 
 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required ><br>
 
- 
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5"></textarea>
 
+                <button type="submit">Submit Form</button>
+            </fieldset>
 
+        </form>
+        
+        <br>
+        <h3>Connect</h3>
+        <a href="https://github.com/shivadixt">github</a> &nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/shiva-dixit-488533308/">LinkedIn</a> &nbsp;&nbsp;
+        <a href="https://x.com/shiva_dxt">X</a> &nbsp;&nbsp;
+        <a href="https://www.upwork.com/freelancers/~017c338989c6b5f24f?mp_source=share">Upwork</a>
+    </section>
+    <hr>
+
+    <section>
+        <h2>Resume</h2>
+        <a href="./ShivaResume.pdf" download="ShivaResume.pdf">ShivaResume</a>
+    </section>
+    <hr>
 
 </body>
 </html>
