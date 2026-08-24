@@ -1,14 +1,22 @@
 *{
-    margin: 0;
+    margin: 1px;
     padding: 0;
     box-sizing: border-box;
     flex-wrap: wrap;
+}
+
+.header{
+    display:flex ;
+    justify-content: space-between;
 }
 
 .circle-container{
     border-radius: 50px;
     border: 20px;
     border-color: aqua;
+    height: 60px;
+    width: 60px;
+    
     
 }
 p{
@@ -31,11 +39,11 @@ section a{
 
 nav{
     display: flex;
-    gap: 20px;
+    gap: 5px;
     justify-content: center;
     border: 2px solid red;
     align-items: center;
-    height: 100px;
+    height: 30px;
 }
 
 nav a{
