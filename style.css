@@ -76,7 +76,7 @@ table {
     margin: 30px;
     padding: 20px;
     border: 2px solid black;
-    width: 300px;
+    /* width: 300px; */
 }
 .connect {
     border: 2px solid black;
