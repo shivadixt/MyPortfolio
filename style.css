@@ -4,6 +4,7 @@
     box-sizing: border-box;
     flex-wrap: wrap;
     scroll-behavior: smooth;
+    background-color: rgb(255, 247, 236);
 }
 
 .header{
@@ -32,6 +33,7 @@ h1{
     font-weight: bold;                
     text-decoration: none;
 }
+
 section a{
     text-decoration: none;
     align-items: center;
@@ -39,10 +41,10 @@ section a{
 }
 
 nav{
+    /* background-color: rgb(243, 243, 197); */
     display: flex;
     gap: 5px;
     justify-content: center;
-    border: 2px solid red;
     align-items: center;
     height: 30px;
 }
@@ -52,6 +54,7 @@ nav a{
     color: inherit;
     font-family: playfair Display,Arial, sans-serif;
     font-weight: bold;
+    justify-content: space-between;
 }
 
 h2, h3{
@@ -78,27 +81,52 @@ table {
     border: 2px solid black;
     max-width: 600px;
 }
-.connect {
+
+#res{
+    /* background-color: antiquewhite; */
     border: 2px solid black;
+    text-align: center;
+    
 }
+.inres a{    
+    background-color: rgb(242, 235, 236);
+    margin: 1px;
+    padding: 1px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    color: inherit; 
+    
+}
+.inres:hover{
+    background-color: rgb(99, 99, 114);
+}
+
 .links{
+    display: flex;
     padding: 9px;
+    justify-content: auto  ;
+    align-items: center;
 }
 input{
-    width: 100%;
+    width: 90%;
     border-radius: 3px;
     cursor: text;
     height: 25px;
 }
 button{
-    width: 100%;
+    width: 90%;
     border-radius: 4px;
-    cursor: pointer;    
+    cursor: pointer;
+    line-height: 30px;    
 }
 textarea{
-    width: 100%;
+    width: 90%;
+    
 }
 fieldset{
     width: 100%;
+
 }
 
