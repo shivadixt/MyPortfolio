@@ -72,11 +72,6 @@ body{
 }
 table {
     border-collapse: collapse;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-table:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 #contact{
     background-color: #f0f0f0;
@@ -84,12 +79,6 @@ table:hover{
     padding: 20px;
     border: 2px solid black;
     max-width: 600px;
-    box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-#contact:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
-
 }
 
 #res{
@@ -120,9 +109,7 @@ table:hover{
     align-items: center;
     /* background-color: aquamarine; */
 }
-#projects{
 
-}
 input{
     width: 90%;
     border-radius: 3px;
@@ -141,5 +128,15 @@ textarea{
 }
 fieldset{
     width: 100%;
+}
+#comments-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+.giscus-comments {
+    margin-top: 30px;
+    text-align: left;
 }
 
