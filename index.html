@@ -8,32 +8,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
-    <header>
-        
-        <!-- Section one -->
-        <div class="header">
-            <h1>Shiva Dixit </h1>
-        <div><img class="circle-container" src="./assets/Myimg.jpg" alt="MyImage" width="100" height="100" ></div>
+    <header class="hero-header-creative">
+        <div class="hero-topbar">
+            <div class="hero-brand">
+                <span class="brand-name">Shiva Dixit</span>
+                <span class="brand-dot"></span>
+            </div>
+            <a href="./assets/ShivaResume.pdf" download="ShivaResume.pdf" class="hero-resume-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume</span>
+            </a>
         </div>
-        
-        <h3>B.Tech CSE Student | Full-Stack Developer | Cloud & DevOps</h3>
-        <nav class="container">
-            <a href="#about-me">About Me </a> &nbsp;&nbsp;
-            <a href="#projects">Projects</a> &nbsp;&nbsp;
-            <a href="#skills">Skills</a> &nbsp;&nbsp;
-            <a href="#journey">Journey</a> &nbsp;&nbsp;
-            <a href="#contact">Contact</a>
-        </nav>
-        <section id="res">
-            <h2>Resume</h2>
-                <div class="inres"> <p>Download my resume:</p> <a href="./assets/ShivaResume.pdf" download="ShivaResume.pdf">ShivaResume</a></div>
-        </section> 
+
+        <div class="hero-grid">
+            <!-- Left Column: Story & Actions -->
+            <div class="hero-left">
+                <h1 class="hero-headline">
+                    <span class="hero-greeting">Hi, I'm </span>
+                    <span class="hero-highlight" id="typewriter-text">Shiva Dixit</span><span class="typewriter-cursor" aria-hidden="true">|</span>
+                </h1>
+                
+                <p class="hero-bio">
+                    I'm a B.Tech CSE student at GLA University, passionate about building full-stack applications, exploring cloud &amp; DevOps, and solving real-world problems through code.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#projects" class="hero-btn-primary">
+                        <span>View My Work</span>
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="hero-btn-secondary">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        <span>Let's Connect</span>
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/shivadixt" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hero-social-link" title="GitHub">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shiva-dixit-488533308/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hero-social-link" title="LinkedIn">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://x.com/shiva_dxt" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="hero-social-link" title="X (Twitter)">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+                    </a>
+                    <a href="mailto:shivadixit0123@gmail.com" aria-label="Email" class="hero-social-link" title="Email">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Poster Photo Card with Washi Tape & Handwritten Annotations -->
+            <div class="hero-right">
+                <div class="poster-display-container">
+                    <!-- Handwritten Note 1 (Top Right) -->
+                    <div class="handwritten-note note-top-right">
+                        <span>Build</span>
+                        <span>Learn</span>
+                        <span>Improve</span>
+                        <span class="note-underline">Repeat</span>
+                    </div>
+
+                    <!-- Taped Poster Frame -->
+                    <div class="hero-poster-frame">
+                        <div class="hero-washi-tape" aria-hidden="true"></div>
+                        <div class="hero-photo-wrapper">
+                            <img src="./assets/Myimg.jpg" alt="Shiva Dixit" class="hero-poster-img">
+                        </div>
+                    </div>
+
+                    <!-- Handwritten Note 2 (Bottom Right with curved arrow) -->
+                    <div class="handwritten-note note-bottom-right">
+                        <svg class="curved-sketch-arrow" width="40" height="40" viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M 40 40 C 28 34, 12 26, 10 10 M 10 10 L 18 12 M 10 10 L 12 20" />
+                        </svg>
+                        <p class="note-text">Just a developer<br>who loves to build<br>things.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
+
+    <nav class="dock-wrapper" id="dock-wrapper">
+        <div class="floating-dock" id="floating-dock">
+            <a href="#about-me" class="dock-item" aria-label="About Me">
+                <span class="dock-tooltip">About Me</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+            </a>
+            <a href="#projects" class="dock-item" aria-label="Projects">
+                <span class="dock-tooltip">Projects</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </span>
+            </a>
+            <a href="#skills" class="dock-item" aria-label="Skills">
+                <span class="dock-tooltip">Skills</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L12 3Z"/></svg>
+                </span>
+            </a>
+            <a href="#journey" class="dock-item" aria-label="Journey">
+                <span class="dock-tooltip">Journey</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                </span>
+            </a>
+            <a href="#contact" class="dock-item" aria-label="Contact">
+                <span class="dock-tooltip">Contact</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <section id="res" class="resume-card">
+        <div class="resume-inner">
+            <div class="resume-info">
+                <h2>Resume</h2>
+                <p class="resume-desc">View or download my updated resume covering technical skills, projects, and coursework.</p>
+            </div>
+            <div class="resume-action inres">
+                <a href="./assets/ShivaResume.pdf" download="ShivaResume.pdf" class="resume-download-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Download Resume</span>
+                    <span class="file-tag">PDF</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <hr>
 
@@ -58,12 +182,15 @@
     <!-- section 4 -->
     <section id="projects">
         <h2>Projects</h2>
-        <table border="1">
-            <tr>
-                <th>Project</th>
-                <th>Description</th>
-                <th>Tech</th>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Description</th>
+                    <th>Tech</th>
+                </tr>
+            </thead>
+            <tbody>
 
             <tr>
                 <td>
@@ -112,6 +239,7 @@
                     <p class="tech-stack">Unity, C#</p>
                 </td>
             </tr>
+            </tbody>
         </table>
         <br>
     </section>
@@ -168,49 +296,423 @@
     <!-- section 5 -->
     <section id="journey">
         <h2>Journey</h2>
-        <p>My journey into software development has been driven by curiosity and experimentation. I started with programming fundamentals and gradually explored different areas of computer science  from web development and databases to mobile development, cloud computing, DevOps, and game development. <br>
-        Instead of limiting myself to a single technology, I like understanding how different parts of software development connect. This has led me to work with frontend interfaces, backend APIs, databases, cloud infrastructure, mobile applications, and game engines. <br>
-        I'm still learning, but every project gives me a better understanding of how real-world software is designed, developed, and deployed.</p>
-        <br>
+        <p class="journey-intro">A chronological roadmap of my growth as an engineer—from foundational computer science to full-stack platforms, cloud architectures, and cross-platform mobile apps.</p>
+
+        <div class="timeline" id="journey-timeline">
+            <!-- Dynamic Glowing Progress Line -->
+            <div class="timeline-track" aria-hidden="true">
+                <div class="timeline-progress-bar" id="timeline-progress"></div>
+            </div>
+
+            <!-- Phase 01 -->
+            <div class="timeline-item" data-phase="1">
+                <div class="timeline-marker">
+                    <div class="timeline-node">
+                        <span class="node-number">01</span>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <div class="timeline-badge-group">
+                            <span class="timeline-phase-pill">Phase 01</span>
+                            <span class="timeline-period">Foundations</span>
+                        </div>
+                        <div class="timeline-icon-box" title="Programming Fundamentals">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                        </div>
+                    </div>
+                    <h3 class="timeline-title">Programming Fundamentals &amp; Logic</h3>
+                    <p class="timeline-desc">Started my software engineering path by building a strong core in computational logic, algorithmic thinking, and fundamental data structures. Focused on understanding memory, syntax, and problem-solving patterns.</p>
+                    
+                    <div class="timeline-highlight">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Mastered OOP principles and algorithmic problem solving</span>
+                    </div>
+
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Python</span>
+                        <span class="timeline-tag">Java</span>
+                        <span class="timeline-tag">C</span>
+                        <span class="timeline-tag">Data Structures</span>
+                        <span class="timeline-tag">Algorithms</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 02 -->
+            <div class="timeline-item" data-phase="2">
+                <div class="timeline-marker">
+                    <div class="timeline-node">
+                        <span class="node-number">02</span>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <div class="timeline-badge-group">
+                            <span class="timeline-phase-pill">Phase 02</span>
+                            <span class="timeline-period">Full-Stack Development</span>
+                        </div>
+                        <div class="timeline-icon-box" title="Full-Stack Web">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <h3 class="timeline-title">Interactive Web &amp; Scalable APIs</h3>
+                    <p class="timeline-desc">Bridged logic to real-world products by developing end-to-end web applications. Mastered responsive client-side UI with React and built REST APIs with Flask &amp; FastAPI, managing persistent data via MongoDB and SQL.</p>
+                    
+                    <div class="timeline-highlight">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Engineered &amp; shipped GLA Exchange platform for campus collaboration</span>
+                    </div>
+
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">React</span>
+                        <span class="timeline-tag">JavaScript</span>
+                        <span class="timeline-tag">FastAPI</span>
+                        <span class="timeline-tag">Node.js</span>
+                        <span class="timeline-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 03 -->
+            <div class="timeline-item" data-phase="3">
+                <div class="timeline-marker">
+                    <div class="timeline-node">
+                        <span class="node-number">03</span>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <div class="timeline-badge-group">
+                            <span class="timeline-phase-pill">Phase 03</span>
+                            <span class="timeline-period">Systems &amp; Cloud</span>
+                        </div>
+                        <div class="timeline-icon-box" title="Cloud & DevOps">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="timeline-title">Cloud Architecture &amp; DevOps Pipelines</h3>
+                    <p class="timeline-desc">Stepped into production-grade infrastructure, virtualization, and automated deployments. Gained deep hands-on experience managing Linux servers, provisioning AWS resources, and implementing infrastructure as code.</p>
+                    
+                    <div class="timeline-highlight">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Architected FinTwin, an AI-powered financial simulation platform on AWS</span>
+                    </div>
+
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">AWS</span>
+                        <span class="timeline-tag">Linux</span>
+                        <span class="timeline-tag">Terraform</span>
+                        <span class="timeline-tag">DevOps</span>
+                        <span class="timeline-tag">Git / GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 04 -->
+            <div class="timeline-item" data-phase="4">
+                <div class="timeline-marker">
+                    <div class="timeline-node active-pulse">
+                        <span class="node-number">04</span>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <div class="timeline-badge-group">
+                            <span class="timeline-phase-pill active-pill">Phase 04 &bull; Present</span>
+                            <span class="timeline-period">Specialization &amp; Future</span>
+                        </div>
+                        <div class="timeline-icon-box" title="Mobile & Game Dev">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        </div>
+                    </div>
+                    <h3 class="timeline-title">Mobile Engineering &amp; Game Development</h3>
+                    <p class="timeline-desc">Expanding versatility into high-performance cross-platform mobile apps using Flutter and Dart. Simultaneously exploring game physics, immersive interactions, and shader concepts with Unity &amp; C#.</p>
+                    
+                    <div class="timeline-highlight">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Building Kavya mobile application &amp; 3D interactive horror game concept</span>
+                    </div>
+
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Flutter</span>
+                        <span class="timeline-tag">Dart</span>
+                        <span class="timeline-tag">Unity</span>
+                        <span class="timeline-tag">C#</span>
+                        <span class="timeline-tag">Cross-Platform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <hr>
 
     <!-- section 6 -->
     <section id="contact">
         <h2>Contact</h2>
-        <form action="">
-            <fieldset>
-                <legend>Send a message</legend><br>
+        <form action="" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
 
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4" placeholder="Write your message here..."></textarea>
+            </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required ><br>
-
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" rows="5"></textarea>
-
-                <button type="submit">Submit Form</button>
-            </fieldset>
-
+            <button type="submit" class="submit-btn">Send Message</button>
         </form>
         
-        <br>
-        <h3 class="connect">Connect</h3>
-        <div class="links">
-        <a href="https://github.com/shivadixt" target="_blank" rel="noopener noreferrer">github</a> 
-        <a href="https://www.linkedin.com/in/shiva-dixit-488533308/" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
-        <a href="https://x.com/shiva_dxt" target="_blank" rel="noopener noreferrer">X</a> 
-        <a href="https://www.upwork.com/freelancers/~017c338989c6b5f24f?mp_source=share" target="_blank" rel="noopener noreferrer">Upwork</a>    
+        <div class="connect-wrapper">
+            <h3 class="connect">Connect</h3>
+            <div class="links">
+                <a href="https://github.com/shivadixt" target="_blank" rel="noopener noreferrer" class="social-badge">GitHub</a> 
+                <a href="https://www.linkedin.com/in/shiva-dixit-488533308/" target="_blank" rel="noopener noreferrer" class="social-badge">LinkedIn</a> 
+                <a href="https://x.com/shiva_dxt" target="_blank" rel="noopener noreferrer" class="social-badge">X (Twitter)</a> 
+                <a href="https://www.upwork.com/freelancers/~017c338989c6b5f24f?mp_source=share" target="_blank" rel="noopener noreferrer" class="social-badge">Upwork</a>    
+            </div>
+        </div>
+        
+        <div class="comments-cta">
+            <p class="comments-prompt">Have feedback or thoughts? Join the conversation!</p>
+            <a href="./comments.html" class="comment-btn resume-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Leave a Comment
+            </a>
         </div>
     </section>
-    <hr>
-    </div>
-    <div>
-        <a href="./comments.html" class="resume-btn">Leave a Comment</a>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dock = document.getElementById('floating-dock');
+            if (!dock) return;
+
+            const items = dock.querySelectorAll('.dock-item');
+            
+            const getSizes = () => {
+                const w = window.innerWidth;
+                if (w <= 480) return { base: 44, max: 60, iconBase: 22, iconMax: 30, threshold: 110 };
+                if (w <= 768) return { base: 44, max: 62, iconBase: 22, iconMax: 30, threshold: 125 };
+                return { base: 44, max: 64, iconBase: 22, iconMax: 32, threshold: 140 };
+            };
+
+            let mouseX = null;
+            let isHovered = false;
+            let animId = null;
+
+            const itemsState = Array.from(items).map(item => {
+                const cfg = getSizes();
+                return {
+                    element: item,
+                    icon: item.querySelector('.dock-icon'),
+                    currentSize: cfg.base,
+                    targetSize: cfg.base,
+                    currentIconSize: cfg.iconBase,
+                    targetIconSize: cfg.iconBase
+                };
+            });
+
+            function updateTargets() {
+                const cfg = getSizes();
+                if (!isHovered || mouseX === null) {
+                    itemsState.forEach(st => {
+                        st.targetSize = cfg.base;
+                        st.targetIconSize = cfg.iconBase;
+                    });
+                    return;
+                }
+
+                itemsState.forEach(st => {
+                    const rect = st.element.getBoundingClientRect();
+                    const itemCenterX = rect.left + rect.width / 2;
+                    const distance = Math.abs(mouseX - itemCenterX);
+
+                    if (distance < cfg.threshold) {
+                        const normDistance = distance / cfg.threshold;
+                        const scaleFactor = Math.cos((normDistance * Math.PI) / 2);
+                        st.targetSize = cfg.base + (cfg.max - cfg.base) * Math.pow(scaleFactor, 1.8);
+                        st.targetIconSize = cfg.iconBase + (cfg.iconMax - cfg.iconBase) * Math.pow(scaleFactor, 1.8);
+                    } else {
+                        st.targetSize = cfg.base;
+                        st.targetIconSize = cfg.iconBase;
+                    }
+                });
+            }
+
+            function animateLoop() {
+                let needsMoreAnimation = false;
+
+                itemsState.forEach(st => {
+                    const diff = st.targetSize - st.currentSize;
+                    const iconDiff = st.targetIconSize - st.currentIconSize;
+
+                    if (Math.abs(diff) > 0.05 || Math.abs(iconDiff) > 0.05) {
+                        st.currentSize += diff * 0.18;
+                        st.currentIconSize += iconDiff * 0.18;
+                        needsMoreAnimation = true;
+                    } else {
+                        st.currentSize = st.targetSize;
+                        st.currentIconSize = st.targetIconSize;
+                    }
+
+                    st.element.style.width = `${st.currentSize}px`;
+                    st.element.style.height = `${st.currentSize}px`;
+                    if (st.icon) {
+                        st.icon.style.width = `${st.currentIconSize}px`;
+                        st.icon.style.height = `${st.currentIconSize}px`;
+                    }
+                });
+
+                if (needsMoreAnimation || isHovered) {
+                    animId = requestAnimationFrame(animateLoop);
+                } else {
+                    animId = null;
+                }
+            }
+
+            function startAnim() {
+                if (!animId) {
+                    animId = requestAnimationFrame(animateLoop);
+                }
+            }
+
+            dock.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                isHovered = true;
+                updateTargets();
+                startAnim();
+            });
+
+            dock.addEventListener('mouseenter', (e) => {
+                mouseX = e.clientX;
+                isHovered = true;
+                updateTargets();
+                startAnim();
+            });
+
+            dock.addEventListener('mouseleave', () => {
+                isHovered = false;
+                mouseX = null;
+                updateTargets();
+                startAnim();
+            });
+
+            // Click event reset for dock navigation
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    isHovered = false;
+                    mouseX = null;
+                    updateTargets();
+                    startAnim();
+                });
+            });
+
+            // Touch events for mobile phones
+            const handleTouch = (e) => {
+                if (e.touches && e.touches.length > 0) {
+                    mouseX = e.touches[0].clientX;
+                    isHovered = true;
+                    updateTargets();
+                    startAnim();
+                }
+            };
+
+            dock.addEventListener('touchstart', handleTouch, { passive: true });
+            dock.addEventListener('touchmove', handleTouch, { passive: true });
+            dock.addEventListener('touchend', () => {
+                isHovered = false;
+                mouseX = null;
+                updateTargets();
+                startAnim();
+            });
+
+            // Creative Journey Timeline Progress Beam & Illuminator
+            const timeline = document.getElementById('journey-timeline');
+            const progressBar = document.getElementById('timeline-progress');
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            if (timeline && progressBar) {
+                const updateTimelineProgress = () => {
+                    const rect = timeline.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    const totalHeight = rect.height;
+                    const triggerPoint = windowHeight * 0.7;
+                    const scrolledInto = triggerPoint - rect.top;
+                    
+                    const progress = Math.max(0, Math.min(1, scrolledInto / totalHeight));
+                    progressBar.style.transform = `scaleY(${progress})`;
+
+                    // Illuminate reached milestone nodes
+                    timelineItems.forEach(item => {
+                        const itemRect = item.getBoundingClientRect();
+                        if (itemRect.top < windowHeight * 0.68) {
+                            item.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                        }
+                    });
+                };
+
+                window.addEventListener('scroll', updateTimelineProgress, { passive: true });
+                window.addEventListener('resize', updateTimelineProgress, { passive: true });
+                updateTimelineProgress();
+            }
+
+            // Hero Typewriter Effect
+            const typewriterEl = document.getElementById('typewriter-text');
+            if (typewriterEl) {
+                const phrases = [
+                    "Shiva Dixit",
+                    "a CSE Student",
+                    "a Full-Stack Developer",
+                    "a Cloud & DevOps Enthusiast",
+                    "turning ideas into real products"
+                ];
+
+                let phraseIndex = 0;
+                let charIndex = phrases[0].length;
+                let isDeleting = true; // start with deletion after initial hold
+
+                const typeLoop = () => {
+                    const currentPhrase = phrases[phraseIndex];
+
+                    if (isDeleting) {
+                        charIndex--;
+                        typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+                    } else {
+                        charIndex++;
+                        typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+                    }
+
+                    let delay = isDeleting ? 38 : 65;
+
+                    if (!isDeleting && charIndex === currentPhrase.length) {
+                        // Fully typed: pause longer on "Shiva Dixit"
+                        delay = phraseIndex === 0 ? 3200 : 2200;
+                        isDeleting = true;
+                    } else if (isDeleting && charIndex === 0) {
+                        isDeleting = false;
+                        phraseIndex = (phraseIndex + 1) % phrases.length;
+                        delay = 320;
+                    }
+
+                    setTimeout(typeLoop, delay);
+                };
+
+                // Give user 2.6 seconds to view the initial "Shiva Dixit" before cycling
+                setTimeout(typeLoop, 2600);
+            }
+        });
+    </script>
 </body>
 </html>
