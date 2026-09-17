@@ -413,16 +413,16 @@ section, [id] {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 10px 16px;
-    height: 64px;
+    gap: 22px;
+    padding: 12px 28px;
+    height: 74px;
     border-radius: 9999px;
     background-color: rgba(24, 24, 27, 0.95) !important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.4), 0 8px 12px -6px rgba(0, 0, 0, 0.3);
-    max-width: 100%;
+    max-width: 90%;
     position: relative;
     z-index: 10000;
 }
@@ -432,10 +432,10 @@ section, [id] {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    min-height: 44px;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
     border-radius: 50%;
     background-color: rgba(39, 39, 42, 0.9) !important;
     color: #f4f4f5 !important;
@@ -465,8 +465,8 @@ section, [id] {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     pointer-events: none;
     transition: width 0.1s ease, height 0.1s ease;
 }
@@ -1395,23 +1395,23 @@ td a:hover {
     }
 
     .floating-dock {
-        gap: 8px;
-        padding: 6px 12px;
-        height: 52px;
-        max-width: 100%;
+        gap: 12px;
+        padding: 8px 16px;
+        height: 60px;
+        max-width: 95%;
         box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
     }
 
     .dock-item {
-        width: 38px !important;
-        height: 38px !important;
-        min-width: 38px !important;
-        min-height: 38px !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
     }
 
     .dock-icon {
-        width: 18px !important;
-        height: 18px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
 
     /* Transform Projects Table into Mobile Cards */
