@@ -179,68 +179,132 @@
     </section>
     <hr>
 
-    <!-- section 4 -->
     <section id="projects">
-        <h2>Projects</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Project</th>
-                    <th>Description</th>
-                    <th>Tech</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div class="section-header">
+            <h2>Projects</h2>
+            <p class="section-subtitle">A collection of full-stack platforms, mobile apps, cloud architectures, and game concepts I've built.</p>
+        </div>
 
-            <tr>
-                <td>
-                    <a  href="https://glaexchange.online/" target="_blank" rel="noopener noreferrer">GLA Exchange</a>
-                </td>
-                <td>
-                    <p>A platform designed around the student community at GLA University, allowing students to share and exchange useful resources and information.</p>
-                </td>
-                <td>
-                    <p class="tech-stack" target="_blank" rel="noopener noreferrer">HTML, CSS, JavaScript, React, MongoDB</p>
-                </td>
-            </tr>
+        <div class="bento-grid" id="bento-grid">
+            <!-- Bento Card 1: Blob Survivors -->
+            <div class="bento-card">
+                <img src="./assets/blob_survivors.jpg" alt="Blob Survivors" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-blob">
+                    <span class="fallback-logo">&lt;Blob Survivors /&gt;</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Live Game</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">Blob Survivors</h3>
+                    <p class="bento-desc">An isometric arena survival spirit shooter game where players fight waves of enemies across dynamic maps with tactical upgrades.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">HTML5 Canvas</span>
+                            <span class="tech-pill">Game Dev</span>
+                        </div>
+                        <a href="https://blobsurvivor2.sdevs.in/" target="_blank" rel="noopener noreferrer" class="bento-btn" title="Play Live Game">
+                            <span>Live Demo</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-            <tr>
-                <td>
-                    <a href="https://github.com/shivadixt/Note_Nest" target="_blank" rel="noopener noreferrer">NoteNest</a>
-                </td>
-                <td>
-                    <p>A notes application focused on creating, organizing, and managing notes with a simple and user-friendly experience.</p>
-                </td>
-                <td>
-                    <p class="tech-stack">Flutter, Dart</p>
-                </td>
-            </tr>
+            <!-- Bento Card 2: Campus Marketplace -->
+            <div class="bento-card">
+                <img src="./assets/campus_marketplace.png" alt="Campus Marketplace" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-marketplace">
+                    <span class="fallback-logo">// Campus Marketplace</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Mobile &amp; Backend</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">Campus Marketplace</h3>
+                    <p class="bento-desc">A community marketplace application enabling users to browse, list, buy, and sell products with a streamlined user experience.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">Flutter</span>
+                            <span class="tech-pill">Dart</span>
+                            <span class="tech-pill">Firebase</span>
+                        </div>
+                        <a href="https://github.com/shivadixt/Campus_marketplace" target="_blank" rel="noopener noreferrer" class="bento-btn" title="View Source Code">
+                            <span>GitHub</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-            <tr>
-                <td>
-                    <a href="https://github.com/shivadixt/fintwin" target="_blank" rel="noopener noreferrer">FinTwin</a>
-                </td>
-                <td>
-                    <p>A financial digital twin platform for simulating financial scenarios, analyzing risk, managing portfolios, and providing AI-powered financial insights.</p>
-                </td>
-                <td>
-                    <p class="tech-stack" >AWS, Linux</p>
-                </td>
-            </tr>
+            <!-- Bento Card 3: NoteNest -->
+            <div class="bento-card">
+                <img src="./assets/notenest.png" alt="NoteNest" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-notenest">
+                    <span class="fallback-logo">NoteNest App</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Mobile App</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">NoteNest</h3>
+                    <p class="bento-desc">A notes application focused on creating, organizing, and managing notes with a simple user experience.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">Flutter</span>
+                            <span class="tech-pill">Dart</span>
+                        </div>
+                        <a href="https://github.com/shivadixt/Note_Nest" target="_blank" rel="noopener noreferrer" class="bento-btn" title="View Source Code">
+                            <span>GitHub</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-            <tr>
-                <td>
-                    House That Changes
-                </td>
-                <td>
-                    <p>A horror game concept where the environment changes and rearranges itself as the player explores the house.</p>
-                </td>
-                <td>
-                    <p class="tech-stack">Unity, C#</p>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+            <!-- Bento Card 4: FinTwin -->
+            <div class="bento-card">
+                <img src="./assets/fintwin.png" alt="FinTwin" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-fintwin">
+                    <span class="fallback-logo">FinTwin AI</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Cloud &amp; AI</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">FinTwin</h3>
+                    <p class="bento-desc">A financial digital twin platform for simulating scenarios, analyzing risk, and AI insights.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">Linux</span>
+                        </div>
+                        <a href="https://github.com/shivadixt/fintwin" target="_blank" rel="noopener noreferrer" class="bento-btn" title="View Source Code">
+                            <span>GitHub</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Card 5: House That Changes -->
+            <div class="bento-card">
+                <img src="./assets/house_changes.png" alt="House That Changes" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-game">
+                    <span class="fallback-logo">House That Changes</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Game Dev</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">House That Changes</h3>
+                    <p class="bento-desc">A horror game concept where the environment dynamically changes as the player explores.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">Unity</span>
+                            <span class="tech-pill">C#</span>
+                        </div>
+                        <span class="bento-concept-pill">Concept</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <br>
     </section>
     <hr>
@@ -711,6 +775,52 @@
 
                 // Give user 2.6 seconds to view the initial "Shiva Dixit" before cycling
                 setTimeout(typeLoop, 2600);
+            }
+
+            // Interactive Bento Focus Rearranging FLIP Animation
+            const bentoGrid = document.getElementById('bento-grid');
+            if (bentoGrid) {
+                bentoGrid.addEventListener('click', (e) => {
+                    const link = e.target.closest('a');
+                    if (link) return; // Allow normal link navigation without rearranging
+
+                    const card = e.target.closest('.bento-card');
+                    if (!card || card === bentoGrid.firstElementChild) return; // Already in main focus slot
+
+                    const allCards = Array.from(bentoGrid.children);
+
+                    // 1. FIRST: Capture initial positions
+                    const firstRects = new Map();
+                    allCards.forEach(c => firstRects.set(c, c.getBoundingClientRect()));
+
+                    // 2. DOM Move: Insert clicked card into first position (Main Focus Slot)
+                    bentoGrid.insertBefore(card, bentoGrid.firstElementChild);
+
+                    // 3. LAST & INVERT: Calculate position deltas and invert visually
+                    allCards.forEach(c => {
+                        const first = firstRects.get(c);
+                        const last = c.getBoundingClientRect();
+
+                        const deltaX = first.left - last.left;
+                        const deltaY = first.top - last.top;
+                        const deltaW = first.width / Math.max(last.width, 1);
+                        const deltaH = first.height / Math.max(last.height, 1);
+
+                        c.style.transformOrigin = 'top left';
+                        c.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${deltaW}, ${deltaH})`;
+                        c.style.transition = 'none';
+                    });
+
+                    // 4. PLAY: Smooth GPU transition to natural slot layout
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            allCards.forEach(c => {
+                                c.style.transition = 'transform 0.55s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease';
+                                c.style.transform = '';
+                            });
+                        });
+                    });
+                });
             }
         });
     </script>
