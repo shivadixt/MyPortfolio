@@ -1395,23 +1395,23 @@ td a:hover {
     }
 
     .floating-dock {
-        gap: 12px;
-        padding: 8px 16px;
-        height: 60px;
-        max-width: 95%;
+        gap: 16px;
+        padding: 10px 20px;
+        height: 64px;
+        max-width: 92%;
         box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
     }
 
     .dock-item {
-        width: 44px !important;
-        height: 44px !important;
-        min-width: 44px !important;
-        min-height: 44px !important;
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        min-height: 48px !important;
     }
 
     .dock-icon {
-        width: 20px !important;
-        height: 20px !important;
+        width: 22px !important;
+        height: 22px !important;
     }
 
     /* Transform Projects Table into Mobile Cards */
@@ -1579,21 +1579,25 @@ td a:hover {
     }
 
     .floating-dock {
-        gap: 6px;
-        padding: 5px 8px;
-        height: 48px;
+        gap: 14px;
+        padding: 8px 16px;
+        height: 58px;
+        width: 92%;
+        max-width: 350px;
+        justify-content: space-evenly;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45);
     }
 
     .dock-item {
-        width: 34px !important;
-        height: 34px !important;
-        min-width: 34px !important;
-        min-height: 34px !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
     }
 
     .dock-icon {
-        width: 16px !important;
-        height: 16px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
 
     .hero-header-creative {
