@@ -172,10 +172,12 @@
                     </div>
 
                     <!-- Taped Poster Frame -->
-                    <div class="hero-poster-frame">
+                    <div class="hero-poster-frame" id="hero-poster-frame" title="Hover to reveal Ghibli mode">
                         <div class="hero-washi-tape" aria-hidden="true"></div>
-                        <div class="hero-photo-wrapper">
-                            <img src="./assets/Myimg.jpg" alt="Shiva Dixit" class="hero-poster-img">
+                        <div class="hero-photo-wrapper" id="hero-photo-wrapper">
+                            <img src="./assets/Myimg.jpg" alt="Shiva Dixit" class="hero-poster-img hero-img-base">
+                            <img src="./assets/MyimgGhibli.jpg?v=2" alt="Shiva Dixit Ghibli" class="hero-poster-img hero-img-ghibli">
+                            <canvas id="hero-water-canvas" class="hero-water-canvas" aria-hidden="true"></canvas>
                         </div>
                     </div>
 
@@ -908,6 +910,298 @@
                         });
                     });
                 });
+            }
+            // Hero Photo Card Ghibli Water Droplet & Ripple Effect
+            const posterFrame = document.getElementById('hero-poster-frame');
+            const photoWrapper = document.getElementById('hero-photo-wrapper');
+            const waterCanvas = document.getElementById('hero-water-canvas');
+            const ghibliImgEl = photoWrapper ? photoWrapper.querySelector('.hero-img-ghibli') : null;
+
+            if (posterFrame && photoWrapper && waterCanvas) {
+                const ctx = waterCanvas.getContext('2d');
+                let width = 0;
+                let height = 0;
+                let dpr = window.devicePixelRatio || 1;
+
+                // Load images for smooth canvas water blend
+                const imgOriginal = new Image();
+                imgOriginal.src = './assets/Myimg.jpg';
+                const imgGhibli = new Image();
+                imgGhibli.src = './assets/MyimgGhibli.jpg?v=2';
+
+                let imagesLoaded = false;
+                let loadedCount = 0;
+                const checkLoaded = () => {
+                    loadedCount++;
+                    if (loadedCount >= 2) imagesLoaded = true;
+                };
+                if (imgOriginal.complete) loadedCount++; else imgOriginal.onload = checkLoaded;
+                if (imgGhibli.complete) loadedCount++; else imgGhibli.onload = checkLoaded;
+                if (loadedCount >= 2) imagesLoaded = true;
+
+                // Dew Drops on the Glass
+                const dewDrops = [
+                    { xRatio: 0.22, yRatio: 0.26, r: 6.5, scale: 0 },
+                    { xRatio: 0.76, yRatio: 0.21, r: 5.0, scale: 0 },
+                    { xRatio: 0.36, yRatio: 0.64, r: 8.5, scale: 0 },
+                    { xRatio: 0.81, yRatio: 0.71, r: 6.0, scale: 0 },
+                    { xRatio: 0.17, yRatio: 0.77, r: 4.5, scale: 0 },
+                    { xRatio: 0.64, yRatio: 0.44, r: 7.5, scale: 0 }
+                ];
+
+                let isHovered = false;
+                let progress = 0; // 0 = base photo, 1 = ghibli
+                let targetProgress = 0;
+                let dropOrigin = { x: 0, y: 0 };
+                let primaryWaveRadius = 0;
+                let maxWaveRadius = 0;
+                let isAnimating = false;
+                let animFrameId = null;
+                let ripples = []; // interactive secondary water ripples
+                let lastPointerMove = 0;
+
+                const resizeCanvas = () => {
+                    const rect = photoWrapper.getBoundingClientRect();
+                    width = rect.width;
+                    height = rect.height;
+                    dpr = window.devicePixelRatio || 1;
+                    waterCanvas.width = width * dpr;
+                    waterCanvas.height = height * dpr;
+                    maxWaveRadius = Math.hypot(width, height) * 1.15;
+                    if (isHovered && progress > 0) render();
+                };
+
+                window.addEventListener('resize', resizeCanvas, { passive: true });
+                resizeCanvas();
+
+                // Draw realistic 3D water droplet with caustics and specular highlights
+                const drawWaterDrop = (x, y, r, alpha) => {
+                    if (alpha <= 0.01 || r <= 0.5) return;
+                    ctx.save();
+                    ctx.globalAlpha = alpha;
+
+                    // 1. Ambient Drop Shadow (bottom-right)
+                    ctx.beginPath();
+                    ctx.ellipse(x + r * 0.25, y + r * 0.28, r * 1.05, r * 0.85, Math.PI / 6, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(15, 23, 42, 0.42)';
+                    ctx.fill();
+
+                    // 2. Refractive Water Body with Caustic Rim
+                    const bodyGrad = ctx.createRadialGradient(x - r * 0.25, y - r * 0.25, r * 0.1, x, y, r);
+                    bodyGrad.addColorStop(0, 'rgba(255, 255, 255, 0.22)');
+                    bodyGrad.addColorStop(0.65, 'rgba(255, 255, 255, 0.06)');
+                    bodyGrad.addColorStop(0.85, 'rgba(15, 23, 42, 0.28)');
+                    bodyGrad.addColorStop(1, 'rgba(225, 245, 255, 0.7)');
+                    ctx.beginPath();
+                    ctx.arc(x, y, r, 0, Math.PI * 2);
+                    ctx.fillStyle = bodyGrad;
+                    ctx.fill();
+
+                    // 3. Bottom Caustic Internal Glow
+                    const causticGrad = ctx.createRadialGradient(x + r * 0.28, y + r * 0.38, 0, x + r * 0.28, y + r * 0.38, r * 0.65);
+                    causticGrad.addColorStop(0, 'rgba(255, 255, 255, 0.75)');
+                    causticGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                    ctx.beginPath();
+                    ctx.arc(x, y, r * 0.95, 0, Math.PI * 2);
+                    ctx.fillStyle = causticGrad;
+                    ctx.fill();
+
+                    // 4. Primary Specular Glint (top-left reflection)
+                    ctx.beginPath();
+                    ctx.arc(x - r * 0.36, y - r * 0.36, r * 0.26, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.96)';
+                    ctx.fill();
+
+                    // 5. Secondary micro-glint
+                    ctx.beginPath();
+                    ctx.arc(x - r * 0.16, y - r * 0.52, r * 0.12, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+                    ctx.fill();
+
+                    ctx.restore();
+                };
+
+                const startAnimation = () => {
+                    if (!isAnimating) {
+                        isAnimating = true;
+                        animFrameId = requestAnimationFrame(loop);
+                    }
+                };
+
+                const loop = () => {
+                    // Smooth transition interpolation
+                    const speed = isHovered ? 0.08 : 0.065;
+                    progress += (targetProgress - progress) * speed;
+
+                    // Wave radius expands
+                    if (isHovered) {
+                        primaryWaveRadius += (maxWaveRadius - primaryWaveRadius) * 0.08;
+                    } else {
+                        primaryWaveRadius += (0 - primaryWaveRadius) * 0.09;
+                    }
+
+                    // Update secondary ripples
+                    for (let i = ripples.length - 1; i >= 0; i--) {
+                        const rip = ripples[i];
+                        rip.r += rip.speed;
+                        rip.alpha *= 0.93;
+                        if (rip.alpha <= 0.01 || rip.r >= rip.maxR) {
+                            ripples.splice(i, 1);
+                        }
+                    }
+
+                    // Update dew drops scale
+                    dewDrops.forEach(drop => {
+                        const targetScale = isHovered ? 1 : 0;
+                        drop.scale += (targetScale - drop.scale) * 0.1;
+                    });
+
+                    render();
+
+                    // Check if animation should stop to conserve battery/CPU
+                    if (!isHovered && progress < 0.005 && ripples.length === 0 && primaryWaveRadius < 1) {
+                        progress = 0;
+                        primaryWaveRadius = 0;
+                        ctx.clearRect(0, 0, waterCanvas.width, waterCanvas.height);
+                        if (ghibliImgEl) ghibliImgEl.style.opacity = '0';
+                        isAnimating = false;
+                        return;
+                    }
+
+                    animFrameId = requestAnimationFrame(loop);
+                };
+
+                const render = () => {
+                    ctx.clearRect(0, 0, waterCanvas.width, waterCanvas.height);
+                    ctx.save();
+                    ctx.scale(dpr, dpr);
+
+                    const clampedProgress = Math.max(0, Math.min(1, progress));
+
+                    // Reveal Ghibli image via circular water droplet ripple mask
+                    if (imagesLoaded && clampedProgress > 0.005) {
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.arc(dropOrigin.x, dropOrigin.y, Math.max(0, primaryWaveRadius), 0, Math.PI * 2);
+                        ctx.clip();
+                        ctx.globalAlpha = Math.min(1, clampedProgress * 1.25);
+                        ctx.drawImage(imgGhibli, 0, 0, width, height);
+                        ctx.restore();
+
+                        // Wavefront Ripple Shockwave Rings
+                        const waveAlpha = Math.sin(clampedProgress * Math.PI) * (1 - clampedProgress * 0.25);
+                        if (waveAlpha > 0.02 && primaryWaveRadius > 0 && primaryWaveRadius < maxWaveRadius * 1.05) {
+                            const rings = [
+                                { offset: 0, width: 3.5, color: 'rgba(255, 255, 255, 0.85)', alpha: waveAlpha },
+                                { offset: -9, width: 2.2, color: 'rgba(15, 23, 42, 0.35)', alpha: waveAlpha * 0.75 },
+                                { offset: -18, width: 2.8, color: 'rgba(190, 235, 255, 0.8)', alpha: waveAlpha * 0.85 },
+                                { offset: -28, width: 1.8, color: 'rgba(255, 255, 255, 0.5)', alpha: waveAlpha * 0.5 }
+                            ];
+
+                            rings.forEach(ring => {
+                                const r = primaryWaveRadius + ring.offset;
+                                if (r > 0) {
+                                    ctx.save();
+                                    ctx.beginPath();
+                                    ctx.arc(dropOrigin.x, dropOrigin.y, r, 0, Math.PI * 2);
+                                    ctx.lineWidth = ring.width;
+                                    ctx.strokeStyle = ring.color;
+                                    ctx.globalAlpha = ring.alpha;
+                                    ctx.stroke();
+                                    ctx.restore();
+                                }
+                            });
+                        }
+                    }
+
+                    // Secondary Interactive Cursor Water Ripples
+                    ripples.forEach(rip => {
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.arc(rip.x, rip.y, rip.r, 0, Math.PI * 2);
+                        ctx.lineWidth = 2.2;
+                        ctx.strokeStyle = 'rgba(225, 245, 255, ' + (rip.alpha * 0.8) + ')';
+                        ctx.stroke();
+
+                        ctx.beginPath();
+                        ctx.arc(rip.x, rip.y, Math.max(0, rip.r - 5), 0, Math.PI * 2);
+                        ctx.lineWidth = 1.4;
+                        ctx.strokeStyle = 'rgba(15, 23, 42, ' + (rip.alpha * 0.35) + ')';
+                        ctx.stroke();
+                        ctx.restore();
+                    });
+
+                    // Realistic Dew Drops on the Glass
+                    dewDrops.forEach(drop => {
+                        const dx = drop.xRatio * width;
+                        const dy = drop.yRatio * height;
+                        const currentR = drop.r * drop.scale;
+                        drawWaterDrop(dx, dy, currentR, drop.scale);
+                    });
+
+                    ctx.restore();
+                };
+
+                // Mouse interaction handlers
+                const onEnter = (e) => {
+                    const rect = photoWrapper.getBoundingClientRect();
+                    const clientX = e.clientX !== undefined ? e.clientX : (rect.left + rect.width / 2);
+                    const clientY = e.clientY !== undefined ? e.clientY : (rect.top + rect.height / 2);
+                    dropOrigin = {
+                        x: Math.max(10, Math.min(width - 10, clientX - rect.left)),
+                        y: Math.max(10, Math.min(height - 10, clientY - rect.top))
+                    };
+                    isHovered = true;
+                    targetProgress = 1;
+                    if (progress < 0.1) {
+                        primaryWaveRadius = 0;
+                    }
+                    startAnimation();
+                };
+
+                const onMove = (e) => {
+                    if (!isHovered) return;
+                    const now = performance.now();
+                    if (now - lastPointerMove < 110) return; // rate-limit interactive ripples
+                    lastPointerMove = now;
+
+                    const rect = photoWrapper.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    if (x >= 0 && x <= width && y >= 0 && y <= height) {
+                        ripples.push({
+                            x: x,
+                            y: y,
+                            r: 3,
+                            maxR: 42 + Math.random() * 22,
+                            alpha: 0.65,
+                            speed: 2.2
+                        });
+                        startAnimation();
+                    }
+                };
+
+                const onLeave = () => {
+                    isHovered = false;
+                    targetProgress = 0;
+                    startAnimation();
+                };
+
+                posterFrame.addEventListener('mouseenter', onEnter);
+                posterFrame.addEventListener('mousemove', onMove);
+                posterFrame.addEventListener('mouseleave', onLeave);
+
+                // Touch / Mobile Support
+                posterFrame.addEventListener('touchstart', (e) => {
+                    if (e.touches && e.touches[0]) {
+                        if (!isHovered) {
+                            onEnter(e.touches[0]);
+                        } else {
+                            onLeave();
+                        }
+                    }
+                }, { passive: true });
             }
         });
     </script>
