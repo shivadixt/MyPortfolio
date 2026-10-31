@@ -37,7 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (scrollPosition >= top && scrollPosition < top + height) {
                 dockButtons.forEach(btn => {
                     if (btn.getAttribute('href') === `#${id}`) {
+                        const wasActive = btn.classList.contains('active');
                         btn.classList.add('active');
+                        if (!wasActive && window.innerWidth <= 960 && btn.parentElement) {
+                            btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        }
                     } else {
                         btn.classList.remove('active');
                     }

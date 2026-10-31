@@ -1657,6 +1657,16 @@ td a:hover {
 
     .hero-topbar {
         margin-bottom: 24px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-topbar-actions {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
     }
 
     .hero-grid {
@@ -1665,9 +1675,10 @@ td a:hover {
     }
 
     .hero-headline {
-        font-size: 32px;
+        font-size: clamp(26px, 7vw, 34px);
         line-height: 1.2;
-        white-space: nowrap;
+        white-space: normal;
+        word-break: break-word;
     }
 
     .hero-bio {
