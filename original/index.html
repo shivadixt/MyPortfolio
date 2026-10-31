@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiva Dixit | Full-Stack Developer &amp; Cloud Enthusiast</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Shiva Dixit | Full-Stack Developer &amp; Cloud Enthusiast">
+    <meta name="description" content="Portfolio of Shiva Dixit - CSE Student at GLA University, Full-Stack Developer &amp; Cloud/DevOps Enthusiast building web applications, mobile apps, and games.">
+    <meta name="keywords" content="Shiva Dixit, Full-Stack Developer, Portfolio, Software Engineer, React, Flutter, Python, Java, Cloud Computing, DevOps, GLA University, Blob Survivors, Campus Marketplace">
+    <meta name="author" content="Shiva Dixit">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sdevs.in/">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#09090b">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sdevs.in/">
+    <meta property="og:title" content="Shiva Dixit | Full-Stack Developer &amp; Cloud Enthusiast">
+    <meta property="og:description" content="Portfolio of Shiva Dixit - CSE Student at GLA University, Full-Stack Developer &amp; Cloud/DevOps Enthusiast building web applications, mobile apps, and games.">
+    <meta property="og:image" content="https://sdevs.in/assets/og-image.jpg">
+    <meta property="og:image:secure_url" content="https://sdevs.in/assets/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:alt" content="Shiva Dixit - Developer Portfolio Logo">
+    <meta property="og:site_name" content="Shiva Dixit Portfolio">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sdevs.in/">
+    <meta name="twitter:title" content="Shiva Dixit | Full-Stack Developer &amp; Cloud Enthusiast">
+    <meta name="twitter:description" content="Portfolio of Shiva Dixit - CSE Student at GLA University, Full-Stack Developer &amp; Cloud/DevOps Enthusiast building web applications, mobile apps, and games.">
+    <meta name="twitter:image" content="https://sdevs.in/assets/og-image.jpg">
+    <meta name="twitter:image:alt" content="Shiva Dixit - Developer Portfolio Logo">
+    <meta name="twitter:creator" content="@shiva_dxt">
+
+    <!-- Structured Data (JSON-LD) for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://sdevs.in/#person",
+          "name": "Shiva Dixit",
+          "jobTitle": "Full-Stack Developer",
+          "url": "https://sdevs.in/",
+          "image": "https://sdevs.in/assets/Myimg.jpg",
+          "sameAs": [
+            "https://github.com/shivadixt",
+            "https://www.linkedin.com/in/shiva-dixit-488533308/",
+            "https://x.com/shiva_dxt"
+          ],
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "GLA University"
+          },
+          "knowsAbout": [
+            "Full-Stack Development",
+            "JavaScript",
+            "React",
+            "Flutter",
+            "Dart",
+            "Python",
+            "Java",
+            "Cloud Computing",
+            "DevOps",
+            "Game Development"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://sdevs.in/#website",
+          "url": "https://sdevs.in/",
+          "name": "Shiva Dixit Portfolio",
+          "description": "Portfolio of Shiva Dixit - Full-Stack Developer & Cloud Enthusiast",
+          "image": "https://sdevs.in/assets/og-image.jpg",
+          "publisher": {
+            "@id": "https://sdevs.in/#person"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="dock-wrapper" id="dock-wrapper">
+        <div class="floating-dock" id="floating-dock">
+            <a href="#about-me" class="dock-item" aria-label="About Me">
+                <span class="dock-tooltip">About Me</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+            </a>
+            <a href="#projects" class="dock-item" aria-label="Projects">
+                <span class="dock-tooltip">Projects</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </span>
+            </a>
+            <a href="#skills" class="dock-item" aria-label="Skills">
+                <span class="dock-tooltip">Skills</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L12 3Z"/></svg>
+                </span>
+            </a>
+            <a href="#journey" class="dock-item" aria-label="Journey">
+                <span class="dock-tooltip">Journey</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                </span>
+            </a>
+            <a href="../index.html" class="dock-item" aria-label="Switch Theme" title="Switch Theme">
+                <span class="dock-tooltip">Switch Theme</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                </span>
+            </a>
+            <a href="#contact" class="dock-item" aria-label="Contact">
+                <span class="dock-tooltip">Contact</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="main">
+    <header class="hero-header-creative">
+        <div class="hero-topbar">
+            <div class="hero-brand">
+                <span class="brand-name">Shiva Dixit</span>
+                <span class="brand-dot"></span>
+            </div>
+            <div class="hero-topbar-actions">
+                <a href="../index.html" class="hero-theme-switch-pill" title="Switch to Bauhaus Theme">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m16 3 4 4-4 4"></path>
+                        <path d="M20 7H4"></path>
+                        <path d="m8 21-4-4 4-4"></path>
+                        <path d="M4 17h16"></path>
+                    </svg>
+                    <span>Switch Theme</span>
+                </a>
+                <a href="../assets/ShivaResume.pdf" download="ShivaResume.pdf" class="hero-resume-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-grid">
+            <!-- Left Column: Story & Actions -->
+            <div class="hero-left">
+                <h1 class="hero-headline">
+                    <span class="hero-greeting">Hi, I'm </span>
+                    <span class="hero-highlight">Shiva Dixit</span>
+                </h1>
+                
+                <p class="hero-bio">
+                    I'm a B.Tech CSE student at GLA University, passionate about building full-stack applications, exploring cloud &amp; DevOps, and solving real-world problems through code.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#projects" class="hero-btn-primary">
+                        <span>View My Work</span>
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="hero-btn-secondary">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        <span>Let's Connect</span>
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/shivadixt" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hero-social-link" title="GitHub">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shiva-dixit-488533308/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hero-social-link" title="LinkedIn">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://x.com/shiva_dxt" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="hero-social-link" title="X (Twitter)">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+                    </a>
+                    <a href="mailto:sdevs.in.cs24@gmail.com" aria-label="Email" class="hero-social-link" title="Email">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Poster Photo Card with Washi Tape & Handwritten Annotations -->
+            <div class="hero-right">
+                <div class="poster-display-container">
+                    <!-- Handwritten Note 1 (Top Right) -->
+                    <div class="handwritten-note note-top-right">
+                        <span>Build</span>
+                        <span>Learn</span>
+                        <span>Improve</span>
+                        <span class="note-underline">Repeat</span>
+                    </div>
+
+                    <!-- Taped Poster Frame -->
+                    <div class="hero-poster-frame" id="hero-poster-frame" title="Shiva Dixit">
+                        <div class="hero-washi-tape" aria-hidden="true"></div>
+                        <div class="hero-photo-wrapper" id="hero-photo-wrapper">
+                            <img src="../assets/Myimg.jpg" alt="Shiva Dixit" class="hero-poster-img hero-img-base">
+                        </div>
+                    </div>
+
+                    <!-- Handwritten Note 2 (Bottom Right with curved arrow) -->
+                    <div class="handwritten-note note-bottom-right">
+                        <svg class="curved-sketch-arrow" width="40" height="40" viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M 40 40 C 28 34, 12 26, 10 10 M 10 10 L 18 12 M 10 10 L 12 20" />
+                        </svg>
+                        <p class="note-text">Just a developer<br>who loves to build<br>things.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="res" class="resume-card">
+        <div class="resume-inner">
+            <div class="resume-info">
+                <h2>Resume</h2>
+                <p class="resume-desc">View or download my updated resume covering technical skills, projects, and coursework.</p>
+            </div>
+            <div class="resume-action inres">
+                <a href="../assets/ShivaResume.pdf" download="ShivaResume.pdf" class="resume-download-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Download Resume</span>
+                    <span class="file-tag">PDF</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Section 2 -->
+    <section>
+        <h2>B.Tech CSE Student & Developer</h2>
+        <p>I'm a B.Tech Computer Science student who enjoys turning ideas into real, usable software. From web applications and mobile apps to cloud technologies and game development, I'm constantly learning by building.</p><br>
+    </section>
+
+    <hr>
+
+    <!-- section 3 -->
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>I'm a B.Tech Computer Science student with a strong interest in software development and emerging technologies. I enjoy learning by building things rather than simply studying them whether that means creating a web application, developing a mobile app, experimenting with cloud infrastructure, or building a game. <br>
+        My current interests include full-stack web development, Python, Flutter, cloud computing, DevOps, databases, and game development. I'm constantly experimenting with new technologies and trying to understand not just how they work, but where and why they should be used. <br>
+        My goal is to become a versatile software developer capable of taking an idea from concept to a working, deployable product.</p>
+        <br>
+    </section>
+    <hr>
+
+    <section id="projects">
+        <div class="section-header">
+            <h2>Projects</h2>
+            <p class="section-subtitle">A collection of full-stack platforms, mobile apps, cloud architectures, and game concepts I've built.</p>
+        </div>
+
+        <div class="bento-grid" id="bento-grid">
+            <!-- Bento Card 1: Blob Survivors -->
+            <div class="bento-card">
+                <img src="../assets/blob_survivors.jpg" alt="Blob Survivors" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-blob">
+                    <span class="fallback-logo">&lt;Blob Survivors /&gt;</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Live Game</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">Blob Survivors</h3>
+                    <p class="bento-desc">An isometric arena survival spirit shooter game where players fight waves of enemies across dynamic maps with tactical upgrades.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">HTML5 Canvas</span>
+                            <span class="tech-pill">Game Dev</span>
+                        </div>
+                        <a href="https://blobsurvivor2.sdevs.in/" target="_blank" rel="noopener noreferrer" class="bento-btn" title="Play Live Game">
+                            <span>Live Demo</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Card 2: Campus Marketplace -->
+            <div class="bento-card">
+                <img src="../assets/campus_marketplace.png" alt="Campus Marketplace" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-marketplace">
+                    <span class="fallback-logo">// Campus Marketplace</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Mobile &amp; Backend</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">Campus Marketplace</h3>
+                    <p class="bento-desc">A community marketplace application enabling users to browse, list, buy, and sell products with a streamlined user experience.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">Flutter</span>
+                            <span class="tech-pill">Dart</span>
+                            <span class="tech-pill">Firebase</span>
+                        </div>
+                        <a href="https://github.com/shivadixt/Campus_marketplace" target="_blank" rel="noopener noreferrer" class="bento-btn" title="View Source Code">
+                            <span>GitHub</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Card 3: NoteNest -->
+            <div class="bento-card">
+                <img src="../assets/notenest.png" alt="NoteNest" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-notenest">
+                    <span class="fallback-logo">NoteNest App</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Mobile App</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">NoteNest</h3>
+                    <p class="bento-desc">A notes application focused on creating, organizing, and managing notes with a simple user experience.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">Flutter</span>
+                            <span class="tech-pill">Dart</span>
+                        </div>
+                        <a href="https://github.com/shivadixt/Note_Nest" target="_blank" rel="noopener noreferrer" class="bento-btn" title="View Source Code">
+                            <span>GitHub</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Card 4: FinTwin -->
+            <div class="bento-card">
+                <img src="../assets/fintwin.png" alt="FinTwin" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-fintwin">
+                    <span class="fallback-logo">FinTwin AI</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Cloud &amp; AI</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">FinTwin</h3>
+                    <p class="bento-desc">A financial digital twin platform for simulating scenarios, analyzing risk, and AI insights.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">Linux</span>
+                        </div>
+                        <a href="https://github.com/shivadixt/fintwin" target="_blank" rel="noopener noreferrer" class="bento-btn" title="View Source Code">
+                            <span>GitHub</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Card 5: House That Changes -->
+            <div class="bento-card">
+                <img src="../assets/house_changes.png" alt="House That Changes" class="bento-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bento-card-fallback fallback-game">
+                    <span class="fallback-logo">House That Changes</span>
+                </div>
+                <div class="bento-card-overlay"></div>
+                <span class="bento-badge">Game Dev</span>
+                <div class="bento-card-content">
+                    <h3 class="bento-title">House That Changes</h3>
+                    <p class="bento-desc">A horror game concept where the environment dynamically changes as the player explores.</p>
+                    <div class="bento-card-footer">
+                        <div class="bento-tags">
+                            <span class="tech-pill">Unity</span>
+                            <span class="tech-pill">C#</span>
+                        </div>
+                        <span class="bento-concept-pill">Concept</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </section>
+    <hr>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>
+                <p>
+                    <strong>Language :</strong> Python, Java, JavaScript, HTML, CSS, Dart
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Frontend :</strong> HTML, CSS, JavaScript, React
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Backend :</strong> Flask, Django, FastApi, node.js
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Mobile Development :</strong> Flutter, Dart
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Databases :</strong> MongoDB,SQL
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Cloud & DevOps :</strong> AWS, Linux, Git, GitHub, Kubernetes, Virtualization
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Game Development :</strong> Unity, C#, unreal, godot
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Tools :</strong> VS Code, Git Bash, Android Studio
+                </p>
+            </li>
+        </ul>
+        <br>
+    </section>
+    <hr>
+
+    <!-- section 5 -->
+    <section id="journey">
+        <h2>Journey</h2>
+        <p class="journey-intro">A chronological roadmap of my growth as an engineer—from foundational computer science to full-stack platforms, cloud architectures, and cross-platform mobile apps.</p>
+
+        <div class="timeline" id="journey-timeline">
+            <!-- Dynamic Glowing Progress Line -->
+            <div class="timeline-track" aria-hidden="true">
+                <div class="timeline-progress-bar" id="timeline-progress"></div>
+            </div>
+
+            <!-- Phase 01 -->
+            <div class="timeline-item" data-phase="1">
+                <div class="timeline-marker">
+                    <div class="timeline-node">
+                        <span class="node-number">01</span>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <div class="timeline-badge-group">
+                            <span class="timeline-phase-pill">Phase 01</span>
+                            <span class="timeline-period">Foundations</span>
+                        </div>
+                        <div class="timeline-icon-box" title="Programming Fundamentals">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                        </div>
+                    </div>
+                    <h3 class="timeline-title">Programming Fundamentals &amp; Logic</h3>
+                    <p class="timeline-desc">Started my software engineering path by building a strong core in computational logic, algorithmic thinking, and fundamental data structures. Focused on understanding memory, syntax, and problem-solving patterns.</p>
+                    
+                    <div class="timeline-highlight">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Mastered OOP principles and algorithmic problem solving</span>
+                    </div>
+
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Python</span>
+                        <span class="timeline-tag">Java</span>
+                        <span class="timeline-tag">C</span>
+                        <span class="timeline-tag">Data Structures</span>
+                        <span class="timeline-tag">Algorithms</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 02 -->
+            <div class="timeline-item" data-phase="2">
+                <div class="timeline-marker">
+                    <div class="timeline-node">
+                        <span class="node-number">02</span>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <div class="timeline-badge-group">
+                            <span class="timeline-phase-pill">Phase 02</span>
+                            <span class="timeline-period">Full-Stack Development</span>
+                        </div>
+                        <div class="timeline-icon-box" title="Full-Stack Web">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <h3 class="timeline-title">Interactive Web &amp; Scalable APIs</h3>
+                    <p class="timeline-desc">Bridged logic to real-world products by developing end-to-end web applications. Mastered responsive client-side UI with React and built REST APIs with Flask &amp; FastAPI, managing persistent data via MongoDB and SQL.</p>
+                    
+                    <div class="timeline-highlight">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Engineered &amp; shipped GLA Exchange platform for campus collaboration</span>
+                    </div>
+
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">React</span>
+                        <span class="timeline-tag">JavaScript</span>
+                        <span class="timeline-tag">FastAPI</span>
+                        <span class="timeline-tag">Node.js</span>
+                        <span class="timeline-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 03 -->
+            <div class="timeline-item" data-phase="3">
+                <div class="timeline-marker">
+                    <div class="timeline-node">
+                        <span class="node-number">03</span>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <div class="timeline-badge-group">
+                            <span class="timeline-phase-pill">Phase 03</span>
+                            <span class="timeline-period">Systems &amp; Cloud</span>
+                        </div>
+                        <div class="timeline-icon-box" title="Cloud & DevOps">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                        </div>
+                    </div>
+                    <h3 class="timeline-title">Cloud Architecture &amp; DevOps Pipelines</h3>
+                    <p class="timeline-desc">Stepped into production-grade infrastructure, virtualization, and automated deployments. Gained deep hands-on experience managing Linux servers, provisioning AWS resources, and implementing infrastructure as code.</p>
+                    
+                    <div class="timeline-highlight">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Architected FinTwin, an AI-powered financial simulation platform on AWS</span>
+                    </div>
+
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">AWS</span>
+                        <span class="timeline-tag">Linux</span>
+                        <span class="timeline-tag">Kubernetes</span>
+                        <span class="timeline-tag">DevOps</span>
+                        <span class="timeline-tag">Git / GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 04 -->
+            <div class="timeline-item" data-phase="4">
+                <div class="timeline-marker">
+                    <div class="timeline-node active-pulse">
+                        <span class="node-number">04</span>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <div class="timeline-badge-group">
+                            <span class="timeline-phase-pill active-pill">Phase 04 &bull; Present</span>
+                            <span class="timeline-period">Specialization &amp; Future</span>
+                        </div>
+                        <div class="timeline-icon-box" title="Mobile & Game Dev">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        </div>
+                    </div>
+                    <h3 class="timeline-title">Mobile Engineering &amp; Game Development</h3>
+                    <p class="timeline-desc">Expanding versatility into high-performance cross-platform mobile apps using Flutter and Dart. Simultaneously exploring game physics, immersive interactions, and shader concepts with Unity &amp; C#.</p>
+                    
+                    <div class="timeline-highlight">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Building Kavya mobile application &amp; 3D interactive horror game concept</span>
+                    </div>
+
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Flutter</span>
+                        <span class="timeline-tag">Dart</span>
+                        <span class="timeline-tag">Unity</span>
+                        <span class="timeline-tag">C#</span>
+                        <span class="timeline-tag">Cross-Platform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- section 6 -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="https://formsubmit.co/sdevs.in.cs24@gmail.com" method="POST" class="contact-form" id="contact-form">
+            <input type="hidden" name="_subject" value="New Portfolio Message (from Shiva Dixit's Website)">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <input type="text" name="_honey" style="display:none">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Opportunity">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        
+        <div class="connect-wrapper">
+            <h3 class="connect">Connect</h3>
+            <div class="links">
+                <a href="https://github.com/shivadixt" target="_blank" rel="noopener noreferrer" class="social-badge">GitHub</a> 
+                <a href="https://www.linkedin.com/in/shiva-dixit-488533308/" target="_blank" rel="noopener noreferrer" class="social-badge">LinkedIn</a> 
+                <a href="https://x.com/shiva_dxt" target="_blank" rel="noopener noreferrer" class="social-badge">X (Twitter)</a> 
+                <a href="https://www.upwork.com/freelancers/~017c338989c6b5f24f?mp_source=share" target="_blank" rel="noopener noreferrer" class="social-badge">Upwork</a>    
+            </div>
+        </div>
+        
+        <div class="comments-cta">
+            <p class="comments-prompt">Have feedback or thoughts? Join the conversation!</p>
+            <a href="../comments.html" class="comment-btn resume-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Leave a Comment
+            </a>
+        </div>
+    </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Aceternity UI Floating Dock Magnetic Effect (Supports Vertical & Horizontal)
+            const dock = document.getElementById('floating-dock');
+            if (dock) {
+                const items = dock.querySelectorAll('.dock-item');
+                
+                const getSizes = () => {
+                    const w = window.innerWidth;
+                    if (w <= 480) return { base: 34, max: 46, iconBase: 16, iconMax: 22, threshold: 90 };
+                    if (w <= 768) return { base: 38, max: 52, iconBase: 18, iconMax: 26, threshold: 110 };
+                    return { base: 50, max: 72, iconBase: 24, iconMax: 34, threshold: 140 };
+                };
+
+                let mousePos = null;
+                let isHovered = false;
+                let animId = null;
+
+                const itemsState = Array.from(items).map(item => {
+                    const cfg = getSizes();
+                    return {
+                        element: item,
+                        icon: item.querySelector('.dock-icon'),
+                        currentSize: cfg.base,
+                        targetSize: cfg.base,
+                        currentIconSize: cfg.iconBase,
+                        targetIconSize: cfg.iconBase
+                    };
+                });
+
+                function updateTargets() {
+                    const cfg = getSizes();
+                    if (!isHovered || mousePos === null) {
+                        itemsState.forEach(st => {
+                            st.targetSize = cfg.base;
+                            st.targetIconSize = cfg.iconBase;
+                        });
+                        return;
+                    }
+
+                    const isVertical = getComputedStyle(dock).flexDirection === 'column';
+
+                    itemsState.forEach(st => {
+                        const rect = st.element.getBoundingClientRect();
+                        const itemCenter = isVertical 
+                            ? (rect.top + rect.height / 2) 
+                            : (rect.left + rect.width / 2);
+                        const distance = Math.abs(mousePos - itemCenter);
+
+                        if (distance < cfg.threshold) {
+                            const normDistance = distance / cfg.threshold;
+                            const scaleFactor = Math.cos((normDistance * Math.PI) / 2);
+                            st.targetSize = cfg.base + (cfg.max - cfg.base) * Math.pow(scaleFactor, 1.8);
+                            st.targetIconSize = cfg.iconBase + (cfg.iconMax - cfg.iconBase) * Math.pow(scaleFactor, 1.8);
+                        } else {
+                            st.targetSize = cfg.base;
+                            st.targetIconSize = cfg.iconBase;
+                        }
+                    });
+                }
+
+                function animateLoop() {
+                    let needsMoreAnimation = false;
+
+                    itemsState.forEach(st => {
+                        const diff = st.targetSize - st.currentSize;
+                        const iconDiff = st.targetIconSize - st.currentIconSize;
+
+                        if (Math.abs(diff) > 0.05 || Math.abs(iconDiff) > 0.05) {
+                            st.currentSize += diff * 0.18;
+                            st.currentIconSize += iconDiff * 0.18;
+                            needsMoreAnimation = true;
+                        } else {
+                            st.currentSize = st.targetSize;
+                            st.currentIconSize = st.targetIconSize;
+                        }
+
+                        st.element.style.width = `${st.currentSize}px`;
+                        st.element.style.height = `${st.currentSize}px`;
+                        if (st.icon) {
+                            st.icon.style.width = `${st.currentIconSize}px`;
+                            st.icon.style.height = `${st.currentIconSize}px`;
+                        }
+                    });
+
+                    if (needsMoreAnimation || isHovered) {
+                        animId = requestAnimationFrame(animateLoop);
+                    } else {
+                        animId = null;
+                    }
+                }
+
+                function startAnim() {
+                    if (!animId) {
+                        animId = requestAnimationFrame(animateLoop);
+                    }
+                }
+
+                const getPointerPos = (e) => {
+                    const isVertical = getComputedStyle(dock).flexDirection === 'column';
+                    return isVertical ? e.clientY : e.clientX;
+                };
+
+                dock.addEventListener('mousemove', (e) => {
+                    mousePos = getPointerPos(e);
+                    isHovered = true;
+                    updateTargets();
+                    startAnim();
+                });
+
+                dock.addEventListener('mouseenter', (e) => {
+                    mousePos = getPointerPos(e);
+                    isHovered = true;
+                    updateTargets();
+                    startAnim();
+                });
+
+                dock.addEventListener('mouseleave', () => {
+                    isHovered = false;
+                    mousePos = null;
+                    updateTargets();
+                    startAnim();
+                });
+
+                items.forEach(item => {
+                    item.addEventListener('click', () => {
+                        isHovered = false;
+                        mousePos = null;
+                        updateTargets();
+                        startAnim();
+                    });
+                });
+
+                const handleTouch = (e) => {
+                    if (e.touches && e.touches.length > 0) {
+                        mousePos = getPointerPos(e.touches[0]);
+                        isHovered = true;
+                        updateTargets();
+                        startAnim();
+                    }
+                };
+
+                dock.addEventListener('touchstart', handleTouch, { passive: true });
+                dock.addEventListener('touchmove', handleTouch, { passive: true });
+                dock.addEventListener('touchend', () => {
+                    isHovered = false;
+                    mousePos = null;
+                    updateTargets();
+                    startAnim();
+                });
+
+                // Active section scrollspy
+                const sections = document.querySelectorAll('section[id], header');
+                const updateActiveDockItem = () => {
+                    const scrollY = window.scrollY + window.innerHeight * 0.35;
+                    let currentSectionId = '';
+
+                    sections.forEach(sec => {
+                        const top = sec.offsetTop;
+                        const height = sec.offsetHeight;
+                        if (scrollY >= top && scrollY < top + height) {
+                            currentSectionId = sec.getAttribute('id');
+                        }
+                    });
+
+                    items.forEach(item => {
+                        const href = item.getAttribute('href');
+                        if (href && href === `#${currentSectionId}`) {
+                            item.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                        }
+                    });
+                };
+
+                window.addEventListener('scroll', updateActiveDockItem, { passive: true });
+                updateActiveDockItem();
+            }
+
+
+            // Creative Journey Timeline Progress Beam & Illuminator
+            const timeline = document.getElementById('journey-timeline');
+            const progressBar = document.getElementById('timeline-progress');
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            if (timeline && progressBar) {
+                const updateTimelineProgress = () => {
+                    const rect = timeline.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    const totalHeight = rect.height;
+                    const triggerPoint = windowHeight * 0.7;
+                    const scrolledInto = triggerPoint - rect.top;
+                    
+                    const progress = Math.max(0, Math.min(1, scrolledInto / totalHeight));
+                    progressBar.style.transform = `scaleY(${progress})`;
+
+                    // Illuminate reached milestone nodes
+                    timelineItems.forEach(item => {
+                        const itemRect = item.getBoundingClientRect();
+                        if (itemRect.top < windowHeight * 0.68) {
+                            item.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                        }
+                    });
+                };
+
+                window.addEventListener('scroll', updateTimelineProgress, { passive: true });
+                window.addEventListener('resize', updateTimelineProgress, { passive: true });
+                updateTimelineProgress();
+            }
+
+            // Interactive Bento Focus Rearranging FLIP Animation
+            const bentoGrid = document.getElementById('bento-grid');
+            if (bentoGrid) {
+                bentoGrid.addEventListener('click', (e) => {
+                    const link = e.target.closest('a');
+                    if (link) return; // Allow normal link navigation without rearranging
+
+                    const card = e.target.closest('.bento-card');
+                    if (!card || card === bentoGrid.firstElementChild) return; // Already in main focus slot
+
+                    const allCards = Array.from(bentoGrid.children);
+
+                    // 1. FIRST: Capture initial positions
+                    const firstRects = new Map();
+                    allCards.forEach(c => firstRects.set(c, c.getBoundingClientRect()));
+
+                    // 2. DOM Move: Insert clicked card into first position (Main Focus Slot)
+                    bentoGrid.insertBefore(card, bentoGrid.firstElementChild);
+
+                    // 3. LAST & INVERT: Calculate position deltas and invert visually
+                    allCards.forEach(c => {
+                        const first = firstRects.get(c);
+                        const last = c.getBoundingClientRect();
+
+                        const deltaX = first.left - last.left;
+                        const deltaY = first.top - last.top;
+                        const deltaW = first.width / Math.max(last.width, 1);
+                        const deltaH = first.height / Math.max(last.height, 1);
+
+                        c.style.transformOrigin = 'top left';
+                        c.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${deltaW}, ${deltaH})`;
+                        c.style.transition = 'none';
+                    });
+
+                    // 4. PLAY: Smooth GPU transition to natural slot layout
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            allCards.forEach(c => {
+                                c.style.transition = 'transform 0.55s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease';
+                                c.style.transform = '';
+                            });
+                        });
+                    });
+                });
+            }
+            // Contact Form Ajax Submission directly to sdevs.in.cs24@gmail.com
+            const rootContactForm = document.getElementById('contact-form');
+            if (rootContactForm) {
+                rootContactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const submitBtn = rootContactForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+
+                    const formData = new FormData(rootContactForm);
+
+                    try {
+                        const response = await fetch('https://formsubmit.co/ajax/sdevs.in.cs24@gmail.com', {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            submitBtn.textContent = 'Message Sent to Shiva ✓';
+                            submitBtn.style.backgroundColor = '#10b981';
+                            rootContactForm.reset();
+                        } else {
+                            window.location.href = `mailto:sdevs.in.cs24@gmail.com?subject=${encodeURIComponent(formData.get('subject') || 'Portfolio Contact')}&body=${encodeURIComponent(formData.get('message') || '')}`;
+                            submitBtn.textContent = 'Opened in Email Client ✓';
+                        }
+                    } catch (err) {
+                        window.location.href = `mailto:sdevs.in.cs24@gmail.com?subject=${encodeURIComponent(formData.get('subject') || 'Portfolio Contact')}&body=${encodeURIComponent(formData.get('message') || '')}`;
+                        submitBtn.textContent = 'Opened in Email Client ✓';
+                    } finally {
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.style.backgroundColor = '';
+                        }, 4000);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

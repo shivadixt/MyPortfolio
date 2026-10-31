@@ -1,55 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="vermilion">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comments | Shiva Dixit</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Comments &amp; Discussion | Shiva Dixit</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Comments &amp; Discussion | Shiva Dixit">
+    <meta name="description" content="Leave thoughts, feedback, and discussion for Shiva Dixit's projects, coursework, and software portfolio.">
+    <meta name="author" content="Shiva Dixit">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sdevs.in/comments.html">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#f4efe6">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+
+    <!-- Fonts: Space Grotesk (Constructivist Display) & JetBrains Mono (Technical Specimen) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bauhaus Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .comments-page-container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding-bottom: 60px;
+        }
+        .comments-editorial-header {
+            margin-bottom: 36px;
+            border-bottom: 2px solid var(--bauhaus-black);
+            padding-bottom: 28px;
+        }
+        .comments-giscus-card {
+            background-color: var(--bauhaus-white);
+            border: 2px solid var(--bauhaus-black);
+            box-shadow: 6px 6px 0px var(--bauhaus-black);
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+        .comments-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        @media (max-width: 768px) {
+            .comments-giscus-card {
+                padding: 16px 12px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Comments</h1>
-        <h3>Leave your thoughts below</h3>
-        <nav style="margin-top: 14px;">
-            <a href="./index.html" class="social-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                </svg>
-                Back to Portfolio
-            </a>
-        </nav>
-    </header>
+    <!-- Main Page Wrapper -->
+    <div class="bauhaus-page-wrap">
 
-    <hr>
+        <!-- Technical Coordinate Header Bar -->
+        <header class="technical-header-bar">
+            <div class="tech-info-left">
+                <div class="bauhaus-symbol-trio" aria-label="Bauhaus Primary Shapes">
+                    <span class="symbol-square" title="Square (Vermilion)"></span>
+                    <span class="symbol-circle" title="Circle (Cobalt)"></span>
+                    <span class="symbol-triangle" title="Triangle (Ochre)"></span>
+                </div>
+                <span>SHIVA DIXIT // B.TECH CSE &bull; GLA UNIVERSITY</span>
+            </div>
 
-    <section id="comments-section">
-        <h2>Discussion</h2>
-        <div class="giscus-comments">
-            <script src="https://giscus.app/client.js"
-        data-repo="shivadixt/MyPortfolio"
-        data-repo-id="R_kgDOTz2g4Q"
-        data-category="General"
-        data-category-id="DIC_kwDOTz2g4c4DFS0Z"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="catppuccin_frappe"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
+            <div class="tech-info-right">
+                <span class="coordinate-stamp">MATHURA, UP, INDIA &bull; 27.4924° N, 77.6737° E</span>
+                
+                <!-- Bauhaus Theme Selector -->
+                <div class="theme-selector-group" title="Select Primary Color System">
+                    <button type="button" class="theme-picker-btn theme-btn-vermilion" data-theme-name="vermilion" aria-label="Vermilion Theme"></button>
+                    <button type="button" class="theme-picker-btn theme-btn-cobalt" data-theme-name="cobalt" aria-label="Cobalt Theme"></button>
+                    <button type="button" class="theme-picker-btn theme-btn-ochre" data-theme-name="ochre" aria-label="Ochre Theme"></button>
+                    <button type="button" class="theme-picker-btn theme-btn-charcoal" data-theme-name="charcoal" aria-label="Charcoal Theme"></button>
+                </div>
+
+                <a href="./original/index.html" class="bauhaus-btn-secondary" style="padding: 6px 14px; font-size: 11px;" title="Switch to Original Cyber Theme">
+                    <span>⇄ SWITCH THEME</span>
+                </a>
+
+                <a href="./index.html" class="bauhaus-btn-primary" style="padding: 6px 14px; font-size: 11px;" title="Return to Main Portfolio">
+                    <span>&larr; PORTFOLIO</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Comments Main Section -->
+        <main class="comments-page-container">
+            <div class="comments-editorial-header">
+                <span class="hero-meta-kicker">08 // COMMUNITY FORUM &bull; GISCUS DISCUSSIONS</span>
+                <h1 class="hero-editorial-headline" style="font-size: clamp(32px, 5vw, 52px); margin: 12px 0;">
+                    Public Discussion &amp; Comments.
+                </h1>
+                <p class="hero-editorial-bio" style="max-width: 720px; font-size: 16px;">
+                    Have suggestions, thoughts, project feedback, or want to say hello? Sign in with your GitHub account below to leave a public message or join the conversation.
+                </p>
+            </div>
+
+            <!-- Giscus Comments Module Frame -->
+            <div class="comments-giscus-card">
+                <div class="comments-card-meta">
+                    <span>FIG. 08 &bull; GISCUS ENGINE</span>
+                    <span>SHIVADIXT / MYPORTFOLIO &bull; GITHUB DISCUSSIONS</span>
+                </div>
+                <div class="giscus-comments-wrapper">
+                    <script src="https://giscus.app/client.js"
+                        data-repo="shivadixt/MyPortfolio"
+                        data-repo-id="R_kgDOTz2g4Q"
+                        data-category="General"
+                        data-category-id="DIC_kwDOTz2g4c4DFS0Z"
+                        data-mapping="pathname"
+                        data-strict="1"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="0"
+                        data-input-position="top"
+                        data-theme="noborder_light"
+                        data-lang="en"
+                        data-loading="lazy"
+                        crossorigin="anonymous"
+                        async>
+                    </script>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER ACCENT STRIP -->
+        <footer class="bauhaus-footer-accent-strip">
+            <div class="enjoy-tag-left">
+                <span class="enjoy-dot"></span>
+                <span>Shiva Dixit &bull; Developer Portfolio Forum</span>
+            </div>
+            <div class="footer-nav-links">
+                <a href="./index.html" class="footer-nav-link">&larr; Return to Main Portfolio</a>
+                <a href="./original/index.html" class="footer-nav-link" title="Switch to original cyber portfolio">Switch Theme &rarr;</a>
+            </div>
+        </footer>
+
+        <!-- Bottom Copyright & Coordinate Meta -->
+        <div class="footer-bottom-meta">
+            <span>&copy; 2026 SHIVA DIXIT &bull; B.TECH CSE &bull; GLA UNIVERSITY</span>
+            <span>MATHURA, UP, INDIA</span>
         </div>
-    </section>
 
-    <hr>
+    </div>
 
+    <!-- Interactive Script (Theme switcher, color preferences) -->
+    <script src="script.js"></script>
 </body>
 </html>
