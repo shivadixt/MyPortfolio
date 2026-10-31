@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments &amp; Discussion | Shiva Dixit</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Comments &amp; Discussion | Shiva Dixit">
+    <meta name="description" content="Leave thoughts, feedback, and discussion for Shiva Dixit's projects, coursework, and software portfolio.">
+    <meta name="author" content="Shiva Dixit">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sdevs.in/original/comments.html">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#fbfbfa">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+    <!-- Original Theme Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=3.2">
+    <style>
+        .comments-page-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 16px 80px 16px;
+        }
+        .comments-header-card {
+            background-color: #ffffff;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+            padding: 36px 32px;
+            margin-bottom: 28px;
+        }
+        .comments-kicker {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: rgb(2, 2, 119);
+            text-transform: uppercase;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin-bottom: 8px;
+        }
+        .comments-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 12px 0;
+            line-height: 1.2;
+        }
+        .comments-subtext {
+            font-size: 15px;
+            color: #4b5563;
+            line-height: 1.6;
+            margin: 0;
+            max-width: 680px;
+        }
+        .comments-forum-card {
+            background-color: #ffffff;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.05);
+            padding: 28px;
+            margin-bottom: 36px;
+        }
+        .comments-meta-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11.5px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            color: #64748b;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+        }
+        .comments-footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 20px;
+            border-top: 1px dashed rgba(0, 0, 0, 0.12);
+        }
+        .comments-footer-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: rgb(2, 2, 119);
+            text-decoration: none;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .comments-footer-link:hover {
+            color: #03039e;
+            transform: translateX(-2px);
+        }
+        .comments-footer-link.forward:hover {
+            transform: translateX(2px);
+        }
+        @media (max-width: 768px) {
+            .comments-page-wrap {
+                padding: 16px 12px calc(85px + env(safe-area-inset-bottom, 0px)) 12px;
+            }
+            .comments-header-card {
+                padding: 24px 18px;
+            }
+            .comments-forum-card {
+                padding: 16px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Dock Navigation -->
+    <nav class="dock-wrapper" id="dock-wrapper">
+        <!-- Mobile Wheel FAB Toggle Button -->
+        <button type="button" class="dock-toggle-btn" id="dock-toggle-btn" aria-label="Toggle Navigation Dock" aria-expanded="false">
+            <svg class="dock-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+                <line x1="12" y1="3" x2="12" y2="9"></line>
+                <line x1="12" y1="15" x2="12" y2="21"></line>
+                <line x1="3" y1="12" x2="9" y2="12"></line>
+                <line x1="15" y1="12" x2="21" y2="12"></line>
+            </svg>
+        </button>
+        <div class="floating-dock" id="floating-dock">
+            <a href="./index.html#about-me" class="dock-item" aria-label="About Me">
+                <span class="dock-tooltip">About Me</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+            </a>
+            <a href="./index.html#projects" class="dock-item" aria-label="Projects">
+                <span class="dock-tooltip">Projects</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </span>
+            </a>
+            <a href="./index.html#skills" class="dock-item" aria-label="Skills">
+                <span class="dock-tooltip">Skills</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L12 3Z"/></svg>
+                </span>
+            </a>
+            <a href="./index.html#journey" class="dock-item" aria-label="Journey">
+                <span class="dock-tooltip">Journey</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                </span>
+            </a>
+            <a href="../comments.html" class="dock-item" aria-label="Switch to Bauhaus Theme" title="Switch to Bauhaus Comments">
+                <span class="dock-tooltip">Switch Theme</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                </span>
+            </a>
+            <a href="./index.html#contact" class="dock-item" aria-label="Contact">
+                <span class="dock-tooltip">Contact</span>
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main">
+        <!-- Top Navigation Bar -->
+        <header class="hero-topbar" style="max-width: 900px; margin: 0 auto; padding: 20px 0;">
+            <div class="hero-brand">
+                <span class="brand-name">Shiva Dixit</span>
+                <span class="brand-dot"></span>
+            </div>
+            <div class="hero-topbar-actions">
+                <a href="../comments.html" class="hero-theme-switch-pill" title="Switch to Bauhaus Comments">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m16 3 4 4-4 4"></path>
+                        <path d="M20 7H4"></path>
+                        <path d="m8 21-4-4 4-4"></path>
+                        <path d="M4 17h16"></path>
+                    </svg>
+                    <span>Switch Theme</span>
+                </a>
+                <a href="./index.html" class="hero-resume-pill" style="text-decoration: none;">
+                    <span>&larr; Return to Portfolio</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Comments Content -->
+        <main class="comments-page-wrap">
+            <div class="comments-header-card">
+                <span class="comments-kicker">COMMUNITY FORUM &bull; GISCUS DISCUSSIONS</span>
+                <h1 class="comments-headline">Public Discussion &amp; Comments.</h1>
+                <p class="comments-subtext">
+                    Have suggestions, thoughts, project feedback, or want to say hello? Sign in with your GitHub account below to leave a public message or join the conversation.
+                </p>
+            </div>
+
+            <!-- Giscus Discussion Box -->
+            <div class="comments-forum-card">
+                <div class="comments-meta-bar">
+                    <span>Original Classic Edition &bull; Giscus Engine</span>
+                    <span>shivadixt/MyPortfolio</span>
+                </div>
+                <div class="giscus-comments-wrapper">
+                    <script src="https://giscus.app/client.js"
+                        data-repo="shivadixt/MyPortfolio"
+                        data-repo-id="R_kgDOTz2g4Q"
+                        data-category="General"
+                        data-category-id="DIC_kwDOTz2g4c4DFS0Z"
+                        data-mapping="pathname"
+                        data-strict="1"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="0"
+                        data-input-position="top"
+                        data-theme="noborder_light"
+                        data-lang="en"
+                        data-loading="lazy"
+                        crossorigin="anonymous"
+                        async>
+                    </script>
+                </div>
+            </div>
+
+            <!-- Footer navigation -->
+            <div class="comments-footer-nav">
+                <a href="./index.html" class="comments-footer-link">&larr; Return to Portfolio</a>
+                <a href="../comments.html" class="comments-footer-link forward">Switch to Bauhaus Theme &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts for Mobile Dock Wheel Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dockWrapper = document.getElementById('dock-wrapper');
+            const dockToggleBtn = document.getElementById('dock-toggle-btn');
+            const floatingDock = document.getElementById('floating-dock');
+
+            if (dockToggleBtn && dockWrapper) {
+                dockToggleBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = dockWrapper.classList.toggle('open');
+                    dockToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (dockWrapper.classList.contains('open') && !dockWrapper.contains(e.target)) {
+                        dockWrapper.classList.remove('open');
+                        dockToggleBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                if (floatingDock) {
+                    floatingDock.addEventListener('click', (e) => {
+                        if (e.target.closest('.dock-item') && window.innerWidth <= 768) {
+                            setTimeout(() => {
+                                dockWrapper.classList.remove('open');
+                                dockToggleBtn.setAttribute('aria-expanded', 'false');
+                            }, 250);
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

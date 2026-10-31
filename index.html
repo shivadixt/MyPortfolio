@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3.1">
 </head>
 <body>
 
@@ -89,9 +89,9 @@
                 <a href="./original/index.html" class="bauhaus-btn-secondary" style="padding: 6px 14px; font-size: 11px;" title="Switch to Original Cyber Theme">
                     <span>⇄ SWITCH THEME</span>
                 </a>
-                <a href="./assets/ShivaResume.pdf" download="ShivaResume.pdf" class="bauhaus-btn-secondary" style="padding: 6px 14px; font-size: 11px;">
+                <button type="button" class="bauhaus-btn-secondary open-resume-trigger" style="padding: 6px 14px; font-size: 11px;" aria-label="Preview Shiva Dixit Resume">
                     <span>⬇ RESUME.PDF</span>
-                </a>
+                </button>
             </div>
         </header>
 
@@ -133,14 +133,14 @@
                         <a href="#contact" class="bauhaus-btn-secondary">
                             <span>LET'S CONNECT &nearr;</span>
                         </a>
-                        <a href="./assets/ShivaResume.pdf" download="ShivaResume.pdf" class="bauhaus-btn-secondary">
+                        <button type="button" class="bauhaus-btn-secondary open-resume-trigger" aria-label="Preview Shiva Dixit Resume">
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                                 <polyline points="7 10 12 15 17 10"></polyline>
                                 <line x1="12" y1="15" x2="12" y2="3"></line>
                             </svg>
                             <span>DOWNLOAD RESUME</span>
-                        </a>
+                        </button>
                     </div>
 
                     <div class="hero-social-strip">
@@ -221,7 +221,7 @@
                     <div class="specimen-header-title">Shiva Dixit // Tech Specimen</div>
                     <div class="specimen-alphabet-block">
                         PYTHON &bull; REACT &bull; NODE &bull; FLUTTER<br>
-                        AWS &bull; DOCKER &bull; LINUX &bull; KUBERNETES<br>
+                        AWS &bull; DOCKER &bull; LINUX &bull; K8S<br>
                         UNITY &bull; C# &bull; MONGODB &bull; SQL
                     </div>
                     <div class="specimen-number-ruler">
@@ -926,6 +926,39 @@
             <span>MATHURA, UP, INDIA</span>
         </div>
 
+    </div>
+
+    <!-- Bauhaus Constructivist Resume Preview Modal -->
+    <div class="bauhaus-modal-backdrop" id="bauhaus-resume-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bauhaus-resume-title">
+        <div class="bauhaus-modal-card">
+            <div class="bauhaus-modal-header">
+                <div class="bauhaus-modal-title-left">
+                    <div class="bauhaus-symbol-trio" aria-label="Bauhaus Primary Shapes">
+                        <span class="symbol-square" title="Square (Vermilion)"></span>
+                        <span class="symbol-circle" title="Circle (Cobalt)"></span>
+                        <span class="symbol-triangle" title="Triangle (Ochre)"></span>
+                    </div>
+                    <h3 id="bauhaus-resume-title" class="bauhaus-modal-title">01 // RESUME SPECIMEN &bull; SHIVA DIXIT</h3>
+                </div>
+                <div class="bauhaus-modal-actions">
+                    <a href="./assets/ShivaResume.pdf" download="ShivaResume.pdf" class="bauhaus-btn-primary" style="padding: 6px 14px; font-size: 11px;">
+                        <span>⬇ DOWNLOAD RESUME.PDF</span>
+                    </a>
+                    <button type="button" class="bauhaus-btn-secondary" id="bauhaus-resume-close" style="padding: 6px 12px; font-size: 11px;" aria-label="Close Resume Specimen">
+                        <span>✕ CLOSE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="bauhaus-modal-body">
+                <iframe class="bauhaus-modal-iframe" src="./assets/ShivaResume.pdf#toolbar=0" title="Shiva Dixit Resume Specimen"></iframe>
+                <div class="bauhaus-modal-fallback">
+                    <p>Unable to preview PDF document directly in your browser?</p>
+                    <a href="./assets/ShivaResume.pdf" download="ShivaResume.pdf" class="bauhaus-btn-primary" style="display: inline-flex;">
+                        <span>DOWNLOAD SHIVA_RESUME.PDF</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Interactive Script -->

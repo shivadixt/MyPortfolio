@@ -135,5 +135,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 6. Bauhaus Resume Preview Modal
+    const bauhausModal = document.getElementById('bauhaus-resume-modal');
+    const resumeTriggers = document.querySelectorAll('.open-resume-trigger');
+    const resumeClose = document.getElementById('bauhaus-resume-close');
+
+    if (bauhausModal) {
+        const openModal = () => {
+            bauhausModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+        const closeModal = () => {
+            bauhausModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        resumeTriggers.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal();
+            });
+        });
+
+        if (resumeClose) {
+            resumeClose.addEventListener('click', closeModal);
+        }
+
+        bauhausModal.addEventListener('click', (e) => {
+            if (e.target === bauhausModal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && bauhausModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
 
 });
